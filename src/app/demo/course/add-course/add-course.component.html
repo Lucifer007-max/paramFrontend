@@ -1,0 +1,65 @@
+<app-card cardTitle="Create Course" [options]="false">
+
+  <form class="row" autocomplete="off" [formGroup]="courseForm" (ngSubmit)="handleSubmit()">
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Course Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" formControlName="courseName">
+    </div>
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Course Image <small class="text-danger">300*300px / 100kb Size</small></label>
+      <input type="file" class="form-control" (change)="onFileSelect($event)" formControlName="courseImage" accept="image/*">
+    </div>
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Course Tag</label>
+      <ng-multiselect-dropdown
+      [placeholder]="'Select Tag'"
+      [settings]="dropdownSettings"
+      [data]="dropdownList"
+          [(ngModel)]="selectedItems"
+          (onSelect)="onItemSelect($event)"
+          (onSelectAll)="onSelectAll($event)"
+        >
+      </ng-multiselect-dropdown>
+    </div>
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Course Details</label>
+       <textarea rows="3" cols="4" class="form-control" formControlName="description"></textarea>
+    </div>
+  </form>
+  <a type="submit" (click)="handleSubmit()" class="btn btn-primary w-25" width="100px">Submit</a>
+
+</app-card>
+
+
+
+
+<app-card cardTitle="Course List" [options]="false">
+  <table class="table" *ngIf="this.courseList.length > 0;else elsePart">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Tags</th>
+        <th scope="col">Image</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of this.courseList; index as i">
+        <th scope="row">{{i+1}} </th>
+        <td>{{list.title}}</td>
+        <td>{{list.description}}</td>
+        <td>{{list.tags}}</td>
+        <td><img src="https://paramapi.getmocktest.com/{{list.image.replace('wwwroot\\', '').replace('/\\/g', '/')}}" width="50px" height="50px"/></td>
+        <td><a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
+    </tbody>
+  </table>  
+  <ng-template #elsePart>
+    <div class="alert alert-danger" role="alert">
+      There is no course created yet !
+    </div>
+  </ng-template>
+
+</app-card>

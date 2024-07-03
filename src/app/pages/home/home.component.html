@@ -1,0 +1,238 @@
+<app-header></app-header>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button
+      *ngFor="let banner of bannerList; let i = index"
+      type="button"
+      [attr.data-bs-target]="'#carouselExampleCaptions'"
+      [attr.data-bs-slide-to]="i"
+      [class.active]="i === 0"
+      [attr.aria-current]="i === 0 ? 'true' : null"
+      [attr.aria-label]="'Slide ' + (i + 1)">
+    </button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let banner of bannerList; let i = index" [class.active]="i === 0">
+      <img [src]="'https://paramapi.getmocktest.com/'+banner.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')"  class="d-block w-100 height_banner" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide {{i + 1}} label</h5>
+        <p>Some representative placeholder content for slide {{i + 1}}.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<div class="section_1">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div>
+          <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Fringilla neque sed eu consequat sed. Adipiscing duis amet nec
+            lorem odio euismod.</p>
+          <a class="btn btn-danger">Start Learing</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="assets/images/home/hero.png" class="img_hero"/>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5 card_conatiner">
+    <div class="row justify-content-center align-items-center ">
+      <div class="col-md-4  col-sm-6 mb-4">
+        <div class="card border-0 bg-icon  h-100">
+          <div class="card-body text-left">
+            <h5 class="card-title">Study Material</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur. Condimentum lorem.</p>
+            <a href="#" class="btn btn-link px-0 text-danger">View More &#43;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4  col-sm-6 mb-4">
+        <div class="card border-0 h-100 bg-blue bg-icon text-white">
+          <div class="card-body text-left">
+            <h5 class="card-title">Online Lectures</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur. Quis massa eu ut sit.</p>
+            <a href="#" class="btn btn-link px-0 text-white">View More &#43;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4  col-sm-6 mb-4">
+        <div class="card border-0 h-100 bg-danger bg-icon  text-white">
+          <div class="card-body text-left">
+            <h5 class="card-title">Test Series</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur. A quis tristique a quam.</p>
+            <a href="#" class="btn btn-link px-0 text-white">View More &#43;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container text-center mt-5" style="margin-top: 14% !important;">
+  <h2 class="mb-3">Course We Offer</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, expedita!</p>
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let course of courseList">
+        <div class="card card-neet">
+          <div class="card-body p-0">
+              <img [src]="'https://paramapi.getmocktest.com/'+course.image.replace('wwwroot\\', '').replace('/\\/g', '/')" alt="NEET" class="card-img ">
+              <div class="p-4 mb-3">
+                <h5 class="card-title text-start">{{course.title}}</h5>
+                <div class="d-flex justify-content-start pills_data mb-3">
+                  <span class="badge badge-pill badge-light border_pills mx-1">Class 11</span>
+                  <span class="badge badge-pill badge-light border_pills mx-1">Class 12</span>
+                  <span class="badge badge-pill badge-light border_pills mx-1">Dropper</span>
+                </div>
+                <a [routerLink]="course.id" class="btn btn-link float-start p-0">Know More <span>&rarr;</span></a>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="container-fluid bg_blue_img p-0 pt-5" >
+
+  <div class="container text-center my-5">
+    <h2>Study Resources</h2>
+    <p class="lead">A diverse array of learning materials to enhance your educational journey.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-notes">
+          <div class="card-body">
+            <img src="../../../assets/images/home/notes.png" alt="Notes" class="card-img w-50 m-auto d-block">
+            <h5 class="card-title text-center">Notes</h5>
+            <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic .</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-reference">
+          <div class="card-body">
+            <img src="../../../assets/images/home/refrence.png" alt="Reference Books" class="card-img w-50 m-auto d-block">
+            <h5 class="card-title text-center mt-3">Reference Books</h5>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. dolorum,?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-ncert">
+          <div class="card-body">
+            <img src="../../../assets/images/home/ncert.png" alt="NCERT Solutions" class="card-img w-50 m-auto d-block">
+            <h5 class="card-title text-center  mt-3">NCERT Solutions</h5>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delt, facilis
+              nobis!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="container mt-5">
+  <div class="text-center mb-4">
+      <h2>What Students Say</h2>
+      <p>Lorem ipsum dolor sit amet consectetur. Tempor id ac ut tincidunt curabitur nisl.</p>
+  </div>
+  <div class="testimonial-slider">
+      <div class="testimonial p-4" *ngFor="let testimonial of testimonials">
+        <div>
+          <small>{{ testimonial.tag }}</small>
+          <p>{{ testimonial.description }}</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img [src]="'https://paramapi.getmocktest.com/'+testimonial.image.replace('wwwroot\\', '').replace('/\\/g', '/')"  alt="Student Image" class="">
+              <h6 class="m-0 mx-3">{{ testimonial.title }}</h6>
+            </div>
+            <div>
+               <i class="fas fa-quote-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div class="container my-5">
+  <div class="text-center mb-4">
+      <h2>Shop With Us</h2>
+      <p>A diverse array of learning materials to enhance your educational journey.</p>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+          <div class="product-card">
+              <img src="https://via.placeholder.com/300" class="product-image" alt="Product Image">
+              <div class="d-flex justify-content-between align-items-center t-2">
+                <div class="product-name">LOREM IPSUM</div>
+                  <i class="fas fa-heart"></i>
+              </div>
+              <div class="star-rating my-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="product-discount"><span class="text-dark">₹ 54.99 </span><span class="product-price mx-2 ">₹60.00</span><span>8.35% OFF</span></div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="product-card">
+              <img src="https://via.placeholder.com/300" class="product-image" alt="Product Image">
+              <div class="d-flex justify-content-between align-items-center t-2">
+                <div class="product-name">LOREM IPSUM</div>
+                  <i class="fas fa-heart"></i>
+              </div>
+              <div class="star-rating my-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="product-discount"><span class="text-dark">₹ 54.99 </span><span class="product-price mx-2 ">₹60.00</span><span>8.35% OFF</span></div>
+
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="product-card">
+              <img src="https://via.placeholder.com/300" class="product-image" alt="Product Image">
+              <div class="d-flex justify-content-between align-items-center t-2">
+                <div class="product-name">LOREM IPSUM</div>
+                  <i class="fas fa-heart"></i>
+              </div>
+              <div class="star-rating my-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="product-discount"><span class="text-dark">₹ 54.99 </span><span class="product-price mx-2 ">₹60.00</span><span>8.35% OFF</span></div>
+
+          </div>
+      </div>
+  </div>
+</div>
+<app-footer></app-footer>

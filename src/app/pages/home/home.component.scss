@@ -1,0 +1,166 @@
+.card {
+  border-radius: 0;
+}
+
+.border_pills {
+  border: 1px solid #ddd;
+  border-radius: 36px;
+  color: #111;
+  padding: 10px 15px;
+}
+
+.pills_id {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color_side::before{
+  content: '';
+  background-color: #111;
+}
+
+
+
+.card-notes {
+  background-color: #f0f8ff;
+}
+
+.card-reference {
+  background-color: #fff7e6;
+}
+
+.card-ncert {
+  background-color: #e6f7ff;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+// .card-text {
+//   font-size: 1rem;
+//   margin-bottom: 15px;
+// }
+
+.card-img {
+  // width: 50px;
+  // height: 50px;
+}
+
+.section_1 {
+  background-color: #E3EFFB;
+  padding: 10% 0;
+  position: relative;
+}
+
+@media (min-width:768px) {
+  .card_conatiner {
+    position: absolute;
+    bottom: -130px;
+    right: 0;
+    left: 0;
+  }
+}
+
+.pills_data {
+  width: 200px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.bg-blue {
+  background: #0E4D85;
+}
+
+.img_hero {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.bg-icon::before{
+  content: '';
+  background-image: url('../../../assets/images/home/icon.png');
+  display: block;
+  filter: contrast(0.5);
+  width: 50px;
+  background-repeat: no-repeat;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+}
+.bg-icon::after{
+  content: '';
+  background-image: url('../../../assets/images/home/icons2.png');
+  display: block;
+  filter: contrast(0.5);
+  width: 50px;
+  background-repeat: no-repeat;
+  height: 40px;
+  position: absolute;
+  top: 34px;
+  right: 21px;
+}
+
+.bg_blue_img::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+  display: block;
+  position: absolute;
+  background: #E3EFFB;
+  z-index: -1;
+}
+.bg_blue_img {
+position: relative;
+}
+
+
+
+
+.product-card {
+  border: none;
+  text-align: start;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+  width: 100%;
+  height: auto;
+}
+.product-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.product-price {
+  text-decoration: line-through;
+  color: grey;
+}
+.product-discount {
+  color: red;
+  margin-left: 5px;
+}
+.star-rating i {
+  color: gold;
+}
+.star-rating .fa-star-half-alt {
+  color: gold;
+}
+.star-rating .fa-star {
+  color: lightgray;
+}
+
+
+.height_banners {
+  height: 350px;
+}
+
+img.d-block.w-100.height_banner {
+  height: 400px;
+}

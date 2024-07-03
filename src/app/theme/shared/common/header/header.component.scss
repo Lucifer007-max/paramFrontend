@@ -1,0 +1,49 @@
+.social-list{
+  list-style: none;
+
+}
+.social-list li a{
+  font-size: 15px;
+  color: #fff;
+  margin: 0 5px;
+}
+.cart_count {
+  top: 0;
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  padding: 0px 5px;
+  border-radius: 16px;
+  color: #111;
+  z-index: 1;
+}
+
+
+.line_white::before {
+  content: "";
+  border: 1px solid #fff;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: -19px;
+  right: -5px;
+  min-height: 38px;
+  background: #111;
+}
+
+.line_white{
+  position: relative;
+  margin: 0 13px;
+
+}
+
+.text_light {
+color: #fff;
+}
+
+
+@media (max-width:600px) {
+.padding_0 {
+  padding: 0;
+}
+}
