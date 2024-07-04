@@ -4,16 +4,11 @@
     padding: 100px 0px;
     background-size: cover;
 }
-.auto-container {
-    position: static;
-    max-width: 1200px;
-    padding: 0px 15px;
-    margin: 0 auto;
-}
+
 .course-page-section-two {
     position: relative;
     padding: 100px 0px 100px;
-}   
+}
 
 .course-block-five .content {
     position: relative;
@@ -136,7 +131,7 @@
         border-color: #111;
         background-color:rgb(197,226,228);
     }
-    
+
     .styled-pagination li a {
         position: relative;
         display: inline-block;
@@ -201,7 +196,7 @@
     .brands-list .form-group .check-box input[type="checkbox"] {
         display: none;
     }
-    
+
 
 .brands-list .form-group .check-box input[type="checkbox"]:checked + label {
     border-color: #25a9e0;

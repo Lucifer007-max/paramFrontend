@@ -30,6 +30,10 @@ const routes: Routes = [
         loadComponent: () => import('./pages/course/course.component'),
       },
       {
+        path: 'course/:id',
+        loadComponent: () => import('./pages/course-details/course-details.component'),
+      },
+      {
         path: 'admin',
         loadComponent: () => import('./admin/authentication/sign-in/sign-in.component')
       },

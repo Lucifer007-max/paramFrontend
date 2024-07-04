@@ -34,7 +34,7 @@
 
 
 <app-card cardTitle="Course List" [options]="false">
-  <!-- <table class="table" *ngIf="this.courseList.length > 0;else elsePart">
+  <table class="table" *ngIf="this.courseList.length > 0;else elsePart">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -55,11 +55,11 @@
         <td><a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)"><i class="fa fa-trash"></i></a></td>
       </tr>
     </tbody>
-  </table>  
+  </table>
   <ng-template #elsePart>
     <div class="alert alert-danger" role="alert">
       There is no course created yet !
     </div>
-  </ng-template> -->
+  </ng-template>
 
 </app-card>

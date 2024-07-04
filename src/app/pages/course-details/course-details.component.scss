@@ -1,0 +1,242 @@
+.course-page-title {
+  position: relative;
+  padding: 90px 0px 135px;
+  background-repeat: repeat;
+  background-color:rgb(246,246,246);
+}
+.auto-container {
+  position: static;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+
+.course-page-title .title {
+  position: relative;
+  padding: 3px 10px;
+  display: inline-block;
+  font-size: 14px;
+  color: #ffff;
+  background-color:#0e4d85;
+}
+
+
+.course-page-title h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  color:#111;
+
+  margin-top: 10px;
+  margin-bottom:20px;
+  // font-family: var(--font-family-Titillium-Web);
+}
+
+
+.course-page-title .rating {
+  position: relative;
+}
+.course-page-title .courses {
+  position: relative;
+  font-weight: 400;
+  line-height: 1em;
+  font-size: 14px;
+  color: #111;
+  margin-left: 20px;
+  padding-left: 45px;
+}
+
+.course-page-title .text {
+  line-height: 38px;
+  font-size: 24px;
+  color: #111;
+  margin-top: 20px;
+}
+
+
+
+
+.course-detail-section .sidebar-column {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+
+
+@media only screen and (max-width: 1340px) {
+  .course-detail-section .sidebar-column .inner-column {
+      margin-left: 0px;
+      position: sticky;
+        top: 10px;
+  }
+}
+
+
+
+.course-detail-section .sidebar-column .content {
+  position: relative;
+  border-radius: 1px;
+  padding: 35px 40px 0px;
+  background-color: #ffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07);
+}
+
+.course-detail-section .sidebar-column .price {
+  position: relative;
+  font-weight: 600;
+  line-height: 1em;
+  font-size: 35px;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+
+
+.course-detail-section .sidebar-column ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+
+.course-detail-section .sidebar-column .enroll-now {
+  position: relative;
+  font-weight: 600;
+  display: block;
+  left: -55px;
+  margin-right: -95px;
+  padding: 18px 15px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0e4d85;
+}
+
+.course-detail-section .content-column .image {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.course-detail-section .sidebar-column .enroll-now:before {
+  position: absolute;
+  content: '';
+  left: 0px;
+  top: -15px;
+  border-bottom: 15px solid #0e4d85;
+  border-left: 15px solid transparent;
+}
+
+
+.course-detail-section .sidebar-column ul li {
+  position: relative;
+  font-weight: 100;
+  font-size: 20px;
+  color:#000;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.course-detail-section .sidebar-column ul i {
+  position: absolute;
+  left: 0px;
+  top: 4px;
+  line-height: 1em;
+  font-size: 20px;
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+}
+
+.course-detail-section .sidebar-column ul li:hover i {
+  transform: rotateX(180deg);
+}
+
+
+.course-tabs ul li button.active{
+  color: #fff;
+  border-color: #111;
+  background-color: #0e4d85;
+}
+
+.course-tabs ul li button {
+  position: relative;
+  line-height: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 17px 36px;
+  display: inline-block;
+  font-size: 20px;
+  text-transform: capitalize;
+  transition: all 500ms ease;
+  color: #111;
+  margin-right: 10px;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+
+.course-tabs .content {
+  position: relative;
+  padding: 50px 0px 0px;
+}
+
+
+.course-detail-section .comments-area .comment-box:nth-child(1) {
+  padding-top: 0px;
+}
+
+.course-detail-section .comments-area .comment .comment-inner {
+  position: relative;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+}
+
+.course-detail-section .comments-area .comment-info {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+  color: #111;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.course-detail-section .comments-area .comment-box .text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #111;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+
+.course-comment-form .form-group input[type="text"], .course-comment-form .form-group input[type="password"], .course-comment-form .form-group input[type="tel"], .course-comment-form .form-group input[type="email"], .course-comment-form .form-group select , textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 28px;
+  padding: 10px 15px;
+  border: 1px solid #efefef;
+  height: 50px;
+  color: #111;
+  font-weight: 300;
+  background: #ddd;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+
+.course-comment-form .form-group input[type="text"]:focus, .course-comment-form .form-group input[type="password"]:focus, .course-comment-form .form-group input[type="tel"]:focus, .course-comment-form .form-group input[type="email"]:focus, .course-comment-form .form-group select:focus, .course-comment-form .form-group textarea:focus , textarea:focus{
+  border-color: #000;
+}
