@@ -46,7 +46,7 @@ export default class AddCourseComponent {
       itemsShowLimit: 3,
       allowSearchFilter: true
     };
-    this.getCourse()
+    // this.getCourse()
   }
   onItemSelect(item: any) {
     console.log(item);

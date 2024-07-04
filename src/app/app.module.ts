@@ -32,6 +32,7 @@ import { ApiService, AuthInterceptorProvider } from 'src/service/api.service';
 import { AuthGuard } from 'src/guard/authguard.guard';
 import { StudentComponent } from './theme/layout/student/student.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { AboutComponent } from './pages/about/about.component';
 // import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
@@ -54,6 +55,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     NavGroupComponent,
     NotFoundComponent,
     StudentComponent,
+    AboutComponent,
 
 
   ],

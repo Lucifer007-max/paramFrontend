@@ -24,11 +24,14 @@ const routes: Routes = [
       {
         path: '',
         loadComponent: () => import('./pages/home/home.component'),
-
+      },
+      {
+        path: 'course',
+        loadComponent: () => import('./pages/course/course.component'),
       },
       {
         path: 'admin',
-        loadComponent: () => import('./demo/authentication/sign-in/sign-in.component')
+        loadComponent: () => import('./admin/authentication/sign-in/sign-in.component')
       },
     ]
   },
@@ -40,33 +43,33 @@ const routes: Routes = [
     children: [
       // {
       //   path: 'admin/signup',
-      //   loadComponent: () => import('./demo/authentication/sign-up/sign-up.component'),
+      //   loadComponent: () => import('./admin/authentication/sign-up/sign-up.component'),
 
       // },
 
       {
         path: 'admin/dashboard',
-        loadComponent: () => import('./demo/dashboard/dash-analytics/dash-analytics.component'),
+        loadComponent: () => import('./admin/dashboard/dash-analytics/dash-analytics.component'),
         // canActivate: [AuthGuard]
       },
       {
         path: 'admin/add-course',
-        loadComponent: () => import('./demo/course/add-course/add-course.component'),
+        loadComponent: () => import('./admin/course/add-course/add-course.component'),
         // canActivate: [AuthGuard]
       },
       {
         path: 'admin/add-student',
-        loadComponent: () => import('./demo/students/add-student/add-student.component'),
+        loadComponent: () => import('./admin/students/add-student/add-student.component'),
         // canActivate: [AuthGuard]
       },
       {
         path: 'admin/add-banner',
-        loadComponent: () => import('./demo/banner/banner.component'),
+        loadComponent: () => import('./admin/banner/banner.component'),
         // canActivate: [AuthGuard]
       },
       {
         path: 'admin/add-testimonial',
-        loadComponent: () => import('./demo/testimonial/testimonial.component'),
+        loadComponent: () => import('./admin/testimonial/testimonial.component'),
         // canActivate: [AuthGuard]
       }
     ]
@@ -78,12 +81,12 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        loadComponent: () => import('./demo/authentication/sign-up/sign-up.component'),
+        loadComponent: () => import('./admin/authentication/sign-up/sign-up.component'),
 
       },
       {
         path: 'student',
-        loadComponent: () => import('./demo/authentication/sign-in/sign-in.component')
+        loadComponent: () => import('./admin/authentication/sign-in/sign-in.component')
       }
     ]
   },
