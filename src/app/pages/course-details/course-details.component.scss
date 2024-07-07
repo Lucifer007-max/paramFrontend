@@ -1,3 +1,387 @@
+.header-section {
+  background-color: #eb427e;
+  background-image: url("../../../assets/images/hero-mask.png");
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.main-container {
+  width: 1280px;
+  margin-top: 20px;
+  margin: 0 auto !important;
+}
+@media (min-width: 1280px) {
+  .main-container {
+      width: 1280px;
+      margin: 0 auto !important;
+  }
+}
+@media (max-width: 1280px) {
+  .main-container {
+      width: 100%;
+  }
+}
+
+.breadcrumb {
+  font-weight: 500;
+  background: 0 0;
+  padding: 0;
+  font-size: 12px !important;
+}
+
+.breadcrumb-item a {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: #fff;
+}
+
+.page-heading {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.page-subheading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.discount-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.price-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .del-text {
+      font-size: 13px;
+  }
+}
+.del-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .buy-card {
+      min-height: 325px !important;
+      min-width: 250px !important;
+  }
+}
+
+.buy-card {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px #0000001a;
+  position: fixed;
+  right: 4%;
+  border-radius: 10px;
+  min-height: auto;
+  min-width: 350px;
+  margin-top: 10px;
+  bottom: 15.5%;
+}
+
+.discounted-text {
+  background-color: #fff;
+  color: #46b586;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.buy-card-small {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px #0000001a;
+  border-radius: 10px;
+}
+
+.head-img-div {
+  position: relative;
+}
+
+.video-box {
+  background: no-repeat padding-box #211818;
+  border-radius: 20px;
+  height: 220px;
+  width: 360px;
+  overflow: hidden;
+  z-index: 1;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .video-box {
+      width: auto !important;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.font-fam-med, .font-fam-medium {
+  font-weight: 400;
+}
+
+.special-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.card-details-div {
+  margin-left: auto;
+}
+
+@media (max-width: 576px) {
+  .card-price-text {
+      font-size: 26px !important;
+  }
+}
+@media (max-width: 768px) {
+  .card-price-text {
+      font-size: 22px !important;
+  }
+}
+.card-price-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .card-del-text {
+      font-size: 14px !important;
+  }
+}
+.card-del-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .card-discounted-text {
+      font-size: 12px !important;
+  }
+}
+.card-discounted-text {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #47b586;
+  border-radius: 20px;
+  color: #fff;
+  padding: 5px;
+}
+
+.btnbuynow {
+  height: 50px;
+  background: #5a4bda 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 100%;
+  outline: none !important;
+  border: 1px solid #5a4bda;
+}
+
+@media (max-width: 576px) {
+  .batch-heading {
+      font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .batch-heading {
+      font-size: 19px;
+  }
+}
+@media (max-width: 992px) {
+  .batch-heading {
+      font-size: 22px;
+  }
+}
+.batch-heading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 62px;
+  color: #3c3c3c;
+}
+
+@media (max-width: 768px) {
+  .batch-heading {
+      font-size: 19px;
+  }
+}
+
+@media (max-width: 992px) {
+  .batch-heading {
+      font-size: 22px;
+  }
+}
+.batch-heading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 62px;
+  color: #3c3c3c;
+}
+
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-prev {
+  display: none;
+}
+
+.owl-next {
+  background-color: #FFFFFF !important;
+  background: url(../../../assets/images/slider/right-arrow.svg) right center no-repeat padding-box;
+  box-shadow: -3px 0px 6px #00000029;
+  border-radius: 16px 0px 0px 16px;
+  height: 60px;
+  position: absolute;
+  top: 42%;
+  /* width: 65px; */
+  z-index: 1000;
+  right: 0%;
+  cursor: pointer;
+  color: transparent;
+  margin-top: -27px;
+  opacity: 1;
+}
+
+.faculty-card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #0000001f;
+  border-radius: 20px;
+  color: #5236ce;
+  min-height: 115px;
+}
+
+.faculty-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #565656;
+}
+
+.knowmore {
+  border-radius: 20px;
+  border-color: #1676dc;
+  background-color: #5236ce;
+  color: #fff;
+}
+
+#faq.accordion-item {
+  border: 0 !important;
+  background: #f0f4fa 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .batch-heading {
+      font-size: 19px;
+  }
+}
+
+@media (max-width: 992px) {
+  .batch-heading {
+      font-size: 22px;
+  }
+}
+.batch-heading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 62px;
+  color: #3c3c3c;
+}
+
+.icon-quora:before {
+  content: 'Q';
+}
+
+[class*=" icon-"]:before,[class^=icon-]:before {
+  font-family: fontello;
+  font-style: normal;
+  font-weight: 900;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1.2em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em
+}
+
 .course-page-title {
   position: relative;
   padding: 90px 0px 135px;
