@@ -3,11 +3,84 @@
     text-align: center;
     padding: 100px 0px;
     background-size: cover;
+    background-color: #ba60d6;
+}
+
+.course-container {
+    margin: 50px auto;
 }
 
 .course-page-section-two {
     position: relative;
     padding: 100px 0px 100px;
+}
+
+.box-class {
+    background: no-repeat padding-box #fff;
+    box-shadow: 0 3px 20px #0000001a;
+    border-radius: 20px;
+    min-height: 255px;
+    padding: 15px;
+}
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto
+}
+
+.video-box {
+    background: no-repeat padding-box #211818;
+    border-radius: 20px;
+    height: 220px;
+    width: 360px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.spe-price {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #333;
+}
+
+.class-old-price,
+.class-price {
+    line-height: 49px;
+    letter-spacing: 0;
+}
+.class-price {
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+}
+.class-old-price {
+    font-weight: 300;
+    font-size: 14px;
+    color: #888;
+}
+.class-price-off {
+    background: no-repeat padding-box #46b284;
+    box-shadow: 0 3px 10px #00000014;
+    border-radius: 20px;
+    height: 29px;
+    line-height: 7px;
+    padding: 12px;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 700;
 }
 
 .course-block-five .content {
