@@ -6,11 +6,11 @@
     <div class="d-flex flex-column head-div col col-lg-8">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="/">Class 11</a></li>
-        <li class="breadcrumb-item"><a href="/">Advance Mathematics</a></li>
+        <li class="breadcrumb-item"><a href="/">{{this.courseTag}}</a></li>
+        <li class="breadcrumb-item"><a href="/">{{this.courseTitle}}</a></li>
       </ol>
 
-      <h1 class="page-heading pt-4 text-capitalize">Advance Mathematics</h1>
+      <h1 class="page-heading pt-4 text-capitalize">{{this.courseTitle}}</h1>
       <span id="page-sub" class="page-subheading"></span>
 
       <div class="mt-4">
@@ -30,10 +30,7 @@
 <div id="buyCardId" class="buy-card p-3 d-none d-md-block" style="z-index: 600">
   <div class="head-img-div d-flex flex-column align-items-center justify-content-center">
     <div class="video-box">
-      <img
-        src="https://images.squarespace-cdn.com/content/v1/586ec16bb3db2b558ebfec60/694329ee-2cd8-4786-9406-77ca00f30b07/math-header.jpg"
-        class="img-fluid"
-      />
+      <img [src]="'https://paramapi.getmocktest.com/'+this.courseImage.replace('wwwroot\\', '').replace('/\\/g', '/')" alt="NEET" class="card-img ">
     </div>
   </div>
   <div class="mt-4">
@@ -85,7 +82,7 @@
       <h2 class="batch-heading font-fam-bold">Batch Details</h2>
       <div class="font-fam-medium my-3">
         <div
-          ><div><div>01. PDF Notes of each Class will be uploaded on PW App.</div></div
+          ><div><div>01. PDF Notes of each Class will be uploaded on Param webiste.</div></div
           ><div><div>02. Daily Practice Problems with their Video Solution in Quiz format.</div></div
           ><div><div>03. Peer to Peer doubt solving will be provided.</div></div
           ><div><div>04. Scheduled tests will be held according to the planner.</div></div
@@ -109,7 +106,7 @@
   </section>
 
   <!-- Top Faculties -->
-  <section class="col-12 col-md-10 col-lg-8">
+  <section class="col-12 col-md-10 col-lg-8 d-none">
     <div class="ftcontainer">
       <h2 class="batch-heading">Top Faculties</h2>
 
@@ -270,7 +267,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="col-12 col-md-10 col-lg-8">
+  <section class="col-12 col-md-10 col-lg-8 d-none">
     <div class="faqcontainer">
       <h2 class="batch-heading">FAQ's</h2>
       <div id="faq" class="accordion-item p-3">
@@ -311,7 +308,7 @@
             <p><span style="font-weight: 400">Yes, you can download videos of any courses you have enrolled in.</span></p
             ><p
               ><span style="font-weight: 400"
-                >The videos can be downloaded and watched offline in the PW app under the download section go to the Study Page &amp; watch
+                >The videos can be downloaded and watched offline in the Param app under the download section go to the Study Page &amp; watch
                 the downloaded video. These videos will be available until the expiry of Online Batches.</span
               ></p
             >

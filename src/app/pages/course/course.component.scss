@@ -3,7 +3,7 @@
     text-align: center;
     padding: 100px 0px;
     background-size: cover;
-    background-color: #ba60d6;
+    background-color: #0e4d85;
 }
 
 .course-container {
@@ -172,7 +172,27 @@
     .course-block-five .feature-list {
         position: relative;
     }
+    .img_div {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
 
+ .card-body {
+  height: 140px;
+}
+.img_ {
+  position: absolute;
+  right: 10px;
+  width: 40% !important;
+  bottom: 0px;
+}
+
+
+    .img_div img {
+      width:25%
+    }
     .course-block-five .price {
         position: relative;
         font-weight: 500;
@@ -347,3 +367,74 @@
     position: relative;
     margin-bottom: 25px;
 }
+
+
+
+
+
+.section_1 {
+  background-color: #fff;
+  padding: 5% 0;
+  position: relative;
+}
+
+@media (min-width:768px) {
+  .card_conatiner {
+    // position: absolute;
+    // bottom: -x
+  }
+}
+
+.pills_data {
+  width: 215px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.bg-blue {
+  background: #0E4D85;
+}
+
+.img_hero {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.bg-icon::before{
+  content: '';
+  background-image: url('../../../assets/images/home/icon.png');
+  display: block;
+  filter: contrast(0.5);
+  width: 50px;
+  background-repeat: no-repeat;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+}
+.bg-icon::after{
+  content: '';
+  background-image: url('../../../assets/images/home/icons2.png');
+  display: block;
+  filter: contrast(0.5);
+  width: 50px;
+  background-repeat: no-repeat;
+  height: 40px;
+  position: absolute;
+  top: 34px;
+  right: 21px;
+}
+
+.bg_blue_img::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+  display: block;
+  position: absolute;
+  background: #E3EFFB;
+  z-index: -1;
+}
+.bg_blue_img {
+position: relative;
+}
+

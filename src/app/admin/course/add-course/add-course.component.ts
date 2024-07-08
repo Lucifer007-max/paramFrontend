@@ -18,7 +18,7 @@ export default class AddCourseComponent {
   selectedItems: any;
   dropdownSettings: any;
   wfile: File | any = null;
-  tags: any;
+  tags:[] | any = [];
   courseList: any;
   loader: boolean = false;
   constructor(private service: ApiService, private FB: FormBuilder) { }
@@ -41,7 +41,7 @@ export default class AddCourseComponent {
       singleSelection: false,
       idField: 'item_id',
       textField: 'item_text',
-      selectAllText: 'Select All',
+      // selectAllText: 'Select All',
       unSelectAllText: 'UnSelect All',
       itemsShowLimit: 3,
       allowSearchFilter: true
@@ -49,19 +49,25 @@ export default class AddCourseComponent {
     // this.getCourse()
   }
   onItemSelect(item: any) {
-    console.log(item);
-    this.tags = item.item_id
+    console.log(item.item_text);
+    // Add the selected item's item_text to the tags array
+    this.tags.push(item.item_text);
+    console.log(this.tags);
   }
+
   onSelectAll(items: any) {
     console.log(items);
+    this.tags = items.map((item: any) => item.item_text);
+    console.log(this.tags);
   }
+
   handleSubmit() {
     if (this.courseForm.valid) {
         this.loader = true;
         const payLoad = {
-            "title": this.courseForm.value.title,
+            "title": this.courseForm.value.courseName,
             "image": this.wfile,
-            "tag": this.courseForm.value.tags,
+            "tag": this.tags,
             "description": this.courseForm.value.description
         }
         this.service.CourseService(payLoad).subscribe((res: any) => {
@@ -96,18 +102,18 @@ export default class AddCourseComponent {
       reader.onload = (e: any) => {
         const img = new Image();
         img.onload = () => {
-          if (img.width !== 300 || img.height !== 300) {
-            this.service.ErrorSnackbar('Image dimensions are not 300x300 pixels');
-            console.error("Image dimensions are not 300x300 pixels");
-            return;
-          } else {
+          // if (img.width !== 300 || img.height !== 300) {
+          //   this.service.ErrorSnackbar('Image dimensions are not 300x300 pixels');
+          //   console.error("Image dimensions are not 300x300 pixels");
+          //   return;
+          // } else {
             this.wfile = file;
             console.log(this.wfile);
             this.courseForm.patchValue({
               courseImage: file
             });
             this.courseForm.get('courseImage')?.updateValueAndValidity();
-          }
+          // }
         };
         img.src = e.target.result;
       };

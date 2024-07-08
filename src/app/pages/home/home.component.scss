@@ -67,7 +67,7 @@
 }
 
 .pills_data {
-  width: 200px;
+  width: 215px;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -119,9 +119,17 @@
 position: relative;
 }
 
+.img_div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
 
-
-
+.img_div img {
+  width:25%
+}
 .product-card {
   border: none;
   text-align: start;
@@ -167,5 +175,13 @@ img.d-block.w-100.height_banner {
 
 .avatar {
   border-radius: 70px;
+
+}
+
+
+.img_div .card-body {
+  height: 200px;
+}
+.img_ {
 
 }

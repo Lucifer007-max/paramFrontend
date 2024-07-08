@@ -26,7 +26,7 @@ const routes: Routes = [
         loadComponent: () => import('./pages/home/home.component'),
       },
       {
-        path: 'course',
+        path: 'maincourse/:id',
         loadComponent: () => import('./pages/course/course.component'),
       },
       {

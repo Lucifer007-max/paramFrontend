@@ -107,6 +107,11 @@ export class ApiService {
     return this.httpClient.get(this.baseUrl + 'Course')
      .pipe(catchError(this.handleError.bind(this)));
   }
+
+  courseGetById(id: number): Observable<any> {
+    return this.httpClient.get(this.baseUrl + 'Course/' + id)
+     .pipe(catchError(this.handleError.bind(this)));
+  }
   bannerGet(): Observable<any> {
     return this.httpClient.get(this.baseUrl + 'Banner')
      .pipe(catchError(this.handleError.bind(this)));
