@@ -34,7 +34,8 @@
 
 
 <app-card cardTitle="Course List" [options]="false">
-  <table class="table" *ngIf="this.courseList.length > 0;else elsePart">
+  <table class="table" >
+    <!-- *ngIf="this.courseList.length > 0;else elsePart" -->
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -56,10 +57,10 @@
       </tr>
     </tbody>
   </table>
-  <ng-template #elsePart>
+  <!-- <ng-template #elsePart>
     <div class="alert alert-danger" role="alert">
       There is no course created yet !
     </div>
-  </ng-template>
+  </ng-template> -->
 
 </app-card>

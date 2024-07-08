@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/theme/shared/shared.module';
 import { ApiService } from 'src/service/api.service';
@@ -12,17 +12,21 @@ declare const $: any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export default class HomeComponent implements OnInit, AfterViewInit {
+export default class HomeComponent implements OnInit, AfterViewChecked {
   bannerList:any;
   testimonialList:any = [];
   courseList:any = [];
+  merchandiesList:any = [];
   // testimonials:any;
+  isSliderInitialized:boolean = false;
   constructor(private service : ApiService){}
+
 
   ngOnInit(): void {
     this.getBanner();
     this.getCourse();
     this.getTestimonial();
+    this.getMerchandies();
   }
 
   getBanner(){
@@ -35,68 +39,19 @@ export default class HomeComponent implements OnInit, AfterViewInit {
       this.courseList = res;
     })
   }
-  getTestimonial(){
-    this.service.testimonialGet().subscribe((res:any)=> {
-      this.testimonialList = res;
-      console.log(res)
+  getMerchandies(){
+    this.service.merchandesGet().subscribe((res:any)=> {
+      this.merchandiesList = res;
     })
   }
+  getTestimonial() {
+    this.service.testimonialGet().subscribe((res: any) => {
+      this.testimonialList = res;
+      console.log(this.testimonialList, res);
+    });
+  }
 
-
-  testimonials = [
-    {
-        "id": 1,
-        "title": "demo                                                                                                                                                                                                                             ",
-        "tag": "Student                                                                                                                                                                                                                          ",
-        "description": "Hello                                                                                                                                                                                                                            ",
-        "image": "https://via.placeholder.com/30"
-    },
-    {
-        "id": 2,
-        "title": "demo                                                                                                                                                                                                                             ",
-        "tag": "Student                                                                                                                                                                                                                          ",
-        "description": "Hello                                                                                                                                                                                                                            ",
-        "image": "https://via.placeholder.com/30"
-    },
-    {
-        "id": 3,
-        "title": "demo                                                                                                                                                                                                                             ",
-        "tag": "Student                                                                                                                                                                                                                          ",
-        "description": "Hello                                                                                                                                                                                                                            ",
-        "image": "https://via.placeholder.com/30"
-    },
-    {
-        "id": 4,
-        "title": "demo                                                                                                                                                                                                                             ",
-        "tag": "Student                                                                                                                                                                                                                          ",
-        "description": "Hello                                                                                                                                                                                                                            ",
-        "image": "https://via.placeholder.com/30"
-    },
-    {
-        "id": 5,
-        "title": "demo                                                                                                                                                                                                                             ",
-        "tag": "Student                                                                                                                                                                                                                          ",
-        "description": "Hello                                                                                                                                                                                                                            ",
-        "image": "https://via.placeholder.com/30"
-    },
-    {
-        "id": 6,
-        "title": "demo                                                                                                                                                                                                                             ",
-        "tag": "Student                                                                                                                                                                                                                          ",
-        "description": "Hello                                                                                                                                                                                                                            ",
-        "image": "https://via.placeholder.com/30 "
-    },
-    {
-        "id": 7,
-        "title": "demo                                                                                                                                                                                                                             ",
-        "tag": "Student                                                                                                                                                                                                                          ",
-        "description": "Hello                                                                                                                                                                                                                            ",
-        "image": "https://via.placeholder.com/30"
-    }
-];
-
-  ngAfterViewInit(): void {
-    console.log(this.testimonials)
+  initializeSlider() {
     $('.testimonial-slider').slick({
       dots: true,
       infinite: true,
@@ -122,6 +77,13 @@ export default class HomeComponent implements OnInit, AfterViewInit {
         }
       ]
     });
+  }
+
+  ngAfterViewChecked() {
+    if (this.testimonialList.length > 0 && !this.isSliderInitialized) {
+      this.initializeSlider();
+      this.isSliderInitialized = true;
+    }
   }
 
 }

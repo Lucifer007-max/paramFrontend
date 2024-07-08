@@ -17,7 +17,7 @@
       <img [src]="'https://paramapi.getmocktest.com/'+banner.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')"  class="d-block w-100 height_banner" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Slide {{i + 1}} label</h5>
-        <p>Some representative placeholder content for slide {{i + 1}}.</p>
+        <p class="text-dark">Some representative placeholder content for slide {{i + 1}}.</p>
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@
 </div>
 
 
-<section class="container-fluid bg_blue_img p-0 pt-5" >
+<section class="container-fluid bg_blue_img p-0 pt-5 d-none" >
 
   <div class="container text-center my-5">
     <h2>Study Resources</h2>
@@ -147,23 +147,44 @@
 </section>
 
 
+<div class="container study-abroad">
+  <div class="row">
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <h2>Study Abroad</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn btn-danger">Learn More</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="assets/study.png" alt="Study Abroad Illustration" class="w-100">
+    </div>
+  </div>
+</div>
+
+
 <div class="container mt-5">
   <div class="text-center mb-4">
       <h2>What Students Say</h2>
       <p>Lorem ipsum dolor sit amet consectetur. Tempor id ac ut tincidunt curabitur nisl.</p>
   </div>
   <div class="testimonial-slider">
-      <div class="testimonial p-4" *ngFor="let testimonial of testimonials">
+      <div class="testimonial p-4" *ngFor="let testimonial of testimonialList">
         <div>
-          <small>{{ testimonial.tag }}</small>
           <p>{{ testimonial.description }}</p>
           <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
-              <img [src]="'https://paramapi.getmocktest.com/'+testimonial.image.replace('wwwroot\\', '').replace('/\\/g', '/')"  alt="Student Image" class="">
-              <h6 class="m-0 mx-3">{{ testimonial.title }}</h6>
+              <img [src]="'https://paramapi.getmocktest.com/'+testimonial.image.replace('wwwroot\\', '').replace('/\\/g', '/')"  alt="Student Image" class="w-25 avatar">
+              <div class="text-center">
+                <h6 class="m-0 mx-3">{{ testimonial.title }}</h6>
+                <small>{{ testimonial.tag }}</small>
+              </div>
             </div>
             <div>
-               <i class="fas fa-quote-right"></i>
+               <!-- <i class="fas fa-quote-right"></i> -->
+                <img src="assets/testimonal.png" class="w-50" />
             </div>
           </div>
         </div>
@@ -180,11 +201,11 @@
       <p>A diverse array of learning materials to enhance your educational journey.</p>
   </div>
   <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4" *ngFor="let merchandies of merchandiesList">
           <div class="product-card">
-              <img src="https://via.placeholder.com/300" class="product-image" alt="Product Image">
-              <div class="d-flex justify-content-between align-items-center t-2">
-                <div class="product-name">LOREM IPSUM</div>
+            <img [src]="'https://paramapi.getmocktest.com/'+merchandies.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')"  alt="Student Image" class="w-100">
+            <div class="d-flex justify-content-between align-items-center t-2">
+                <div class="product-name">{{merchandies.title}}M</div>
                   <i class="fas fa-heart"></i>
               </div>
               <div class="star-rating my-2">
@@ -194,43 +215,8 @@
                   <i class="fas fa-star-half-alt"></i>
                   <i class="fas fa-star"></i>
               </div>
-              <div class="product-discount"><span class="text-dark">₹ 54.99 </span><span class="product-price mx-2 ">₹60.00</span><span>8.35% OFF</span></div>
-          </div>
-      </div>
-      <div class="col-md-4">
-          <div class="product-card">
-              <img src="https://via.placeholder.com/300" class="product-image" alt="Product Image">
-              <div class="d-flex justify-content-between align-items-center t-2">
-                <div class="product-name">LOREM IPSUM</div>
-                  <i class="fas fa-heart"></i>
-              </div>
-              <div class="star-rating my-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <div class="product-discount"><span class="text-dark">₹ 54.99 </span><span class="product-price mx-2 ">₹60.00</span><span>8.35% OFF</span></div>
-
-          </div>
-      </div>
-      <div class="col-md-4">
-          <div class="product-card">
-              <img src="https://via.placeholder.com/300" class="product-image" alt="Product Image">
-              <div class="d-flex justify-content-between align-items-center t-2">
-                <div class="product-name">LOREM IPSUM</div>
-                  <i class="fas fa-heart"></i>
-              </div>
-              <div class="star-rating my-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <div class="product-discount"><span class="text-dark">₹ 54.99 </span><span class="product-price mx-2 ">₹60.00</span><span>8.35% OFF</span></div>
-
+              <div class="product-discount"><span class="text-dark">₹ {{merchandies.price}} </span>
+                <span class="product-price mx-2 d-none ">₹60.00</span><span class="d-none">8.35% OFF</span></div>
           </div>
       </div>
   </div>
