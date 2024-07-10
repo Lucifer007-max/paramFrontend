@@ -94,6 +94,18 @@ export class ApiService {
     return this.httpClient.post(this.baseUrl + 'Testimonial', formData)
      .pipe(catchError(this.handleError.bind(this)));
   }
+  AboutService(payload:any): Observable<any> {
+    const formData: FormData = new FormData();
+    for (const key in payload) {
+      if (payload.hasOwnProperty(key)) {
+        formData.append(key, payload[key]);
+        console.log(key, payload[key])
+      }
+    }
+
+    return this.httpClient.post(this.baseUrl + 'About', formData)
+     .pipe(catchError(this.handleError.bind(this)));
+  }
   MerchandiesService(payload:any): Observable<any> {
     const formData: FormData = new FormData();
     for (const key in payload) {
@@ -123,6 +135,10 @@ export class ApiService {
     return this.httpClient.get(this.baseUrl + 'Course')
      .pipe(catchError(this.handleError.bind(this)));
   }
+  aboutGet(): Observable<any> {
+    return this.httpClient.get(this.baseUrl + 'About')
+     .pipe(catchError(this.handleError.bind(this)));
+  }
 
   courseGetById(id: number): Observable<any> {
     return this.httpClient.get(this.baseUrl + 'Course/' + id)
@@ -142,11 +158,15 @@ export class ApiService {
     return this.httpClient.get(this.baseUrl + 'Merchandies')
      .pipe(catchError(this.handleError.bind(this)));
   }
+
   bannerDelete(id: number): Observable<any> {
     return this.httpClient.delete(this.baseUrl + 'Banner/' + id)
      .pipe(catchError(this.handleError.bind(this)));
   }
-
+  aboutDelete(id: number): Observable<any> {
+    return this.httpClient.delete(this.baseUrl + 'About/' + id)
+     .pipe(catchError(this.handleError.bind(this)));
+  }
   handleError(error: any): Observable<never> {
     let errorMessage = 'An unknown error occurred!';
     if (error.error instanceof ErrorEvent) {

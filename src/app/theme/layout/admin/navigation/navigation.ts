@@ -70,11 +70,18 @@ export const NavigationItems: NavigationItem[] = [
         external: true
       },
       {
-        id: 'course',
-        title: 'Merchandise Management',
+        id: 'product',
+        title: 'Product Management',
         type: 'item',
         url: '/admin/merchandise-management',
         icon: 'feather icon-cloth'
+      },
+      {
+        id: 'about',
+        title: 'About Management',
+        type: 'item',
+        url: '/admin/about-management',
+        icon: 'feather icon-cog'
       },
     ]
   }

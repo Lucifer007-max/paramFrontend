@@ -18,11 +18,15 @@ export default class HomeComponent implements OnInit, AfterViewChecked {
   courseList:any = [];
   merchandiesList:any = [];
   // testimonials:any;
+  Loader:boolean = false;
   isSliderInitialized:boolean = false;
+  aboutList:any;
   constructor(private service : ApiService){}
 
 
   ngOnInit(): void {
+    this.Loader = true
+    this.getAbout();
     this.getBanner();
     this.getCourse();
     this.getTestimonial();
@@ -37,17 +41,19 @@ export default class HomeComponent implements OnInit, AfterViewChecked {
   getCourse(){
     this.service.courseGet().subscribe((res:any)=> {
       this.courseList = res;
+      this.Loader = false
     })
   }
   getMerchandies(){
     this.service.merchandesGet().subscribe((res:any)=> {
       this.merchandiesList = res;
+      this.Loader = false
     })
   }
   getTestimonial() {
     this.service.testimonialGet().subscribe((res: any) => {
       this.testimonialList = res;
-      console.log(this.testimonialList, res);
+      this.Loader = false
     });
   }
 
@@ -86,4 +92,10 @@ export default class HomeComponent implements OnInit, AfterViewChecked {
     }
   }
 
+
+  getAbout() {
+    this.service.aboutGet().subscribe((res => {
+      this.aboutList = res
+    }))
+  }
 }
