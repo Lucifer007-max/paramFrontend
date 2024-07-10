@@ -32,8 +32,9 @@ import { ApiService, AuthInterceptorProvider } from 'src/service/api.service';
 import { AuthGuard } from 'src/guard/authguard.guard';
 import { StudentComponent } from './theme/layout/student/student.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-import { AboutComponent } from './pages/about/about.component';
-// import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './admin/about/about.component';
+// import { LoginComponent } from './admin/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AboutComponent } from './pages/about/about.component';
     NotFoundComponent,
     StudentComponent,
     AboutComponent,
+    // LoginComponent,
 
 
   ],

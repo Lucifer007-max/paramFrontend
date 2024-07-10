@@ -15,7 +15,7 @@
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let banner of bannerList; let i = index" [class.active]="i === 0">
       <img [src]="'https://paramapi.getmocktest.com/'+banner.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')"  class="d-block w-100 height_banner" alt="...">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none">
         <h5>Slide {{i + 1}} label</h5>
         <p class="text-dark">Some representative placeholder content for slide {{i + 1}}.</p>
       </div>
@@ -38,9 +38,9 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div>
-          <h2>Are you aspiring to become an ENGINEER or DOCTOR ?</h2>
-          <p>Lorem ipsum dolor sit amet consectetur. Fringilla neque sed eu consequat sed. Adipiscing duis amet nec
-            lorem odio euismod.</p>
+          <h2>Are you aspiring to become an <span class="main_txt">ENGINEER or DOCTOR</span> ?</h2>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur. Fringilla neque sed eu consequat sed. Adipiscing duis amet nec
+            lorem odio euismod.</p> -->
           <a class="btn btn-danger">Start Learing</a>
         </div>
       </div>
@@ -52,42 +52,39 @@
   <div class="container mt-5 card_conatiner">
     <div class="row justify-content-center align-items-center ">
 
-
-      <div class="col-md-4  col-sm-6 mb-4">
-        <div class="card border-0 bg-icon  h-100">
-          <div class="card-body text-left">
-          <div class="img_div">
-            <h5 class="card-title m-0">Study Material</h5>
-            <img src="assets/studymaterial.png" class="img_" />
-          </div>
-          <p></p>
-            <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Condimentum lorem.</p> -->
-            <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4  col-sm-6 mb-4">
-        <div class="card border-0 h-100 bg-blue bg-icon text-white">
-          <div class="card-body text-left">
-            <div class="img_div">
-              <h5 class="card-title m-0">Online Lectures</h5>
-              <img src="assets/Elearn.png" class="img_"/>
+        <!-- Card 1 -->
+        <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-1">
+          <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 1"> -->
+          <img src="assets/studymaterial.png" class="img_ card-img-right" />
+          <div class="card-body">
+              <h5 class="card-title">Study Material</h5>
+              <p class="card-text">Equip yourself with quality study material.</p>
+              <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
             </div>
-            <a routerLink="/course" class="btn btn-link px-0 text-white">View More &#43;</a>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4  col-sm-6 mb-4">
-        <div class="card border-0 h-100 bg-danger bg-icon  text-white">
-          <div class="card-body text-left">
-          <div class="img_div">
-            <h5 class="card-title m-0">Test Series</h5>
-              <img src="assets/testseries.png" class="img_"/>
+
+          <!-- Card 2 -->
+          <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-2">
+            <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 2"> -->
+            <img src="assets/Elearn.png" class="img_ card-img-right"/>
+
+            <div class="card-body">
+              <h5 class="card-title">Online Lectures</h5>
+              <p class="card-text">Empower your learning journey with the flexibility.</p>
+              <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
+            </div>
           </div>
-            <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. A quis tristique a quam.</p> -->
-            <a routerLink="/course" class="btn btn-link px-0 text-white">View More &#43;</a>
+
+          <!-- Card 3 -->
+          <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-3">
+            <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 3"> -->
+            <img src="assets/testseries.png" class="img_ card-img-right"/>
+
+            <div class="card-body">
+              <h5 class="card-title">Online Test</h5>
+              <p class="card-text">Prepare, click, succeed – the essence of online testing</p>
+              <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -95,78 +92,33 @@
 
 
 <div class="container text-center mt-5" style="margin-top: 14% !important;">
-  <h2 class="mb-3">Course We Offer</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, expedita!</p>
+  <h2 class="mb-3 main_txt title">Course We Offer</h2>
+  <p>Unlock Your Potential with Online Learning</p>
   <div class="row">
-    <div class="col-md-6 col-lg-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let course of courseList">
         <div class="card card-neet">
           <div class="card-body p-0">
-              <!-- <img [src]="'https://paramapi.getmocktest.com/'+course.image.replace('wwwroot\\', '').replace('/\\/g', '/')" alt="NEET" class="card-img "> -->
-              <img src="https://paramapi.getmocktest.com/uploads\Image.png" alt="NEET" class="card-img ">
+              <img [src]="'https://paramapi.getmocktest.com/'+course.image.replace('wwwroot\\', '').replace('/\\/g', '/')" alt="{{course.title}}.png" class="card-img ">
+              <!-- <img src="https://paramapi.getmocktest.com/uploads\Image.png" alt="NEET" class="card-img "> -->
               <div class="p-4 mb-3">
-                <h5 class="card-title text-start">IIT </h5>
+                <h5 class="card-title text-start">{{course.title}} </h5>
                 <div class="d-flex justify-content-start pills_data mb-3">
-                  <span class="badge badge-pill badge-light border_pills mx-1">
+                  <!-- <span class="badge badge-pill badge-light border_pills mx-1">
                     12th
                   </span>
                   <span class="badge badge-pill badge-light border_pills mx-1">
                     11th
-                  </span>
-                  <!-- <span *ngFor="let tag of course.tags.split(',')" class="badge badge-pill badge-light border_pills mx-1">
-                    {{ tag.trim() }}
                   </span> -->
+                  <span *ngFor="let tag of course.tags.split(',')" class="badge badge-pill badge-light border_pills mx-1">
+                    {{ tag.trim() }}
+                  </span>
                 </div>
-                <a routerLink="maincourse/iit" class="btn btn-link float-start p-0">Know More <span>&rarr;</span></a>
+                <a routerLink="maincourse/{{course.title.trim().toLowerCase()}}" class="btn btn-link float-start p-0">Know More <span>&rarr;</span></a>
               </div>
           </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card card-neet">
-          <div class="card-body p-0">
-              <!-- <img [src]="'https://paramapi.getmocktest.com/'+course.image.replace('wwwroot\\', '').replace('/\\/g', '/')" alt="NEET" class="card-img "> -->
-              <img src="https://paramapi.getmocktest.com/uploads\Image.png" alt="NEET" class="card-img ">
-              <div class="p-4 mb-3">
-                <h5 class="card-title text-start">NEET </h5>
-                <div class="d-flex justify-content-start pills_data mb-3">
-                  <span class="badge badge-pill badge-light border_pills mx-1">
-                    12th
-                  </span>
-                  <span class="badge badge-pill badge-light border_pills mx-1">
-                    11th
-                  </span>
-                  <!-- <span *ngFor="let tag of course.tags.split(',')" class="badge badge-pill badge-light border_pills mx-1">
-                    {{ tag.trim() }}
-                  </span> -->
-                </div>
-                <a routerLink="maincourse/neet" class="btn btn-link float-start p-0">Know More <span>&rarr;</span></a>
-              </div>
-          </div>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card card-neet">
-          <div class="card-body p-0">
-              <!-- <img [src]="'https://paramapi.getmocktest.com/'+course.image.replace('wwwroot\\', '').replace('/\\/g', '/')" alt="NEET" class="card-img "> -->
-              <img src="https://paramapi.getmocktest.com/uploads\Image.png" alt="NEET" class="card-img ">
-              <div class="p-4 mb-3">
-                <h5 class="card-title text-start">Demo </h5>
-                <div class="d-flex justify-content-start pills_data mb-3">
-                  <span class="badge badge-pill badge-light border_pills mx-1">
-                    12th
-                  </span>
-                  <span class="badge badge-pill badge-light border_pills mx-1">
-                    11th
-                  </span>
-                  <!-- <span *ngFor="let tag of course.tags.split(',')" class="badge badge-pill badge-light border_pills mx-1">
-                    {{ tag.trim() }}
-                  </span> -->
-                </div>
-                <a routerLink="maincourse/jee" class="btn btn-link float-start p-0">Know More <span>&rarr;</span></a>
-              </div>
-          </div>
-        </div>
-    </div>
+
   </div>
 </div>
 
@@ -217,12 +169,12 @@
 <div class="container study-abroad">
   <div class="row">
     <div class="col-md-6 d-flex flex-column justify-content-center">
-      <h2>Study Abroad</h2>
+      <h2 class="title">Study Abroad</h2>
       <p>Lorem ipsum dolor sit amet consectetur.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <div class="d-flex align-items-center">
-        <a href="#" class="btn btn-danger">Learn More</a>
+        <a href="#" class="btn btn-danger">Know More</a>
       </div>
     </div>
     <div class="col-md-6">
@@ -234,7 +186,7 @@
 
 <div class="container mt-5">
   <div class="text-center mb-4">
-      <h2>What Students Say</h2>
+      <h2 class="title">What Students Say</h2>
       <p>Lorem ipsum dolor sit amet consectetur. Tempor id ac ut tincidunt curabitur nisl.</p>
   </div>
   <div class="testimonial-slider">
@@ -264,7 +216,7 @@
 
 <div class="container my-5">
   <div class="text-center mb-4">
-      <h2>Shop With Us</h2>
+      <h2 class="title">Shop With Us</h2>
       <p>A diverse array of learning materials to enhance your educational journey.</p>
   </div>
   <div class="row">

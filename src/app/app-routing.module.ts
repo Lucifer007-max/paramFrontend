@@ -26,6 +26,10 @@ const routes: Routes = [
         loadComponent: () => import('./pages/home/home.component'),
       },
       {
+        path: 'about',
+        loadComponent: () => import('./pages/about/about.component'),
+      },
+      {
         path: 'maincourse/:id',
         loadComponent: () => import('./pages/course/course.component'),
       },
@@ -35,7 +39,7 @@ const routes: Routes = [
       },
       {
         path: 'admin',
-        loadComponent: () => import('./admin/authentication/sign-in/sign-in.component')
+        loadComponent: () => import('./admin/login/login.component')
       },
     ]
   },
@@ -45,11 +49,6 @@ const routes: Routes = [
     path: '',
     component: AdminComponent,
     children: [
-      // {
-      //   path: 'admin/signup',
-      //   loadComponent: () => import('./admin/authentication/sign-up/sign-up.component'),
-
-      // },
 
       {
         path: 'admin/dashboard',
@@ -75,7 +74,12 @@ const routes: Routes = [
         path: 'admin/add-testimonial',
         loadComponent: () => import('./admin/testimonial/testimonial.component'),
         // canActivate: [AuthGuard]
-      }
+      },
+      {
+        path: 'admin/merchandise-management',
+        loadComponent: () => import('./admin/merchandise/merchandise.component'),
+        // canActivate: [AuthGuard]
+      },
     ]
   },
 

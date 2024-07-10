@@ -94,12 +94,28 @@ export class ApiService {
     return this.httpClient.post(this.baseUrl + 'Testimonial', formData)
      .pipe(catchError(this.handleError.bind(this)));
   }
+  MerchandiesService(payload:any): Observable<any> {
+    const formData: FormData = new FormData();
+    for (const key in payload) {
+      if (payload.hasOwnProperty(key)) {
+        formData.append(key, payload[key]);
+        console.log(key, payload[key])
+      }
+    }
+
+    return this.httpClient.post(this.baseUrl + 'Merchandies', formData)
+     .pipe(catchError(this.handleError.bind(this)));
+  }
   courseDelete(id: number): Observable<any> {
     return this.httpClient.delete(this.baseUrl + 'Course/' + id)
      .pipe(catchError(this.handleError.bind(this)));
   }
   testimonialDelete(id: number): Observable<any> {
     return this.httpClient.delete(this.baseUrl + 'Testimonial/' + id)
+     .pipe(catchError(this.handleError.bind(this)));
+  }
+  merchandiesDelete(id: number): Observable<any> {
+    return this.httpClient.delete(this.baseUrl + 'Merchandies/' + id)
      .pipe(catchError(this.handleError.bind(this)));
   }
 

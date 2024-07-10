@@ -3,10 +3,10 @@
 <section class="page-title" style="background-image: url(https://jufailitech.com/envatoitems/LMSOne/html/images/background/pattern-10.png)">
   <div class="pattern-layer" style="background-image: url(images/background/pattern-9.png)"></div>
   <div class="auto-container">
-    <h2 style="color: white">Course</h2>
+    <h2 style="color: white">{{this.URLId.toUpperCase()}}</h2>
     <ul class="bread-crumb p-0">
       <li><a href="/">Home</a></li>
-      <li>Course</li>
+      <li>{{this.URLId.toUpperCase()}}</li>
     </ul>
   </div>
 </section>
@@ -121,11 +121,6 @@
   </div>
 </div>
 
-
-
-
-
-
 <div class="container text-center mt-5" style="margin-top: 5% !important; display:none;">
   <h2 class="mb-3">Course We Offer</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, expedita!</p>
@@ -148,8 +143,6 @@
     </div>
   </div>
 </div>
-
-
 
 <section style="background-color: #e0e0e0; padding:5% 0; display:none;">
 
@@ -388,6 +381,8 @@
             </tbody>
           </table>
         </div>
+
+        <h2 *ngIf="this.URLId != 'neet'||'iit'" class="text-center text-info">Course Price and other Data will Comming Soon..!</h2>
     </div>
   </div>
 </div>
