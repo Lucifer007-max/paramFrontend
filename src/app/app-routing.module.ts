@@ -38,8 +38,8 @@ const routes: Routes = [
         loadComponent: () => import('./pages/course-details/course-details.component'),
       },
       {
-        path: 'admin',
-        loadComponent: () => import('./admin/login/login.component')
+        path: 'login',
+        loadComponent: () => import('./pages/login/login.component')
       },
     ]
   },
