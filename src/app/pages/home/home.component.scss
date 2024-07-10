@@ -39,6 +39,9 @@
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // .card-text {
