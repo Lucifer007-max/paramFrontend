@@ -80,6 +80,11 @@ const routes: Routes = [
         loadComponent: () => import('./admin/merchandise/merchandise.component'),
         // canActivate: [AuthGuard]
       },
+      {
+        path: 'admin/about-management',
+        loadComponent: () => import('./admin/about/about.component'),
+        // canActivate: [AuthGuard]
+      },
     ]
   },
 
