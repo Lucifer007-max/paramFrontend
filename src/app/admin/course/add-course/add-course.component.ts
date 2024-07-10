@@ -21,6 +21,7 @@ export default class AddCourseComponent {
   tags:[] | any = [];
   courseList: any;
   loader: boolean = false;
+  sloader: boolean = false;
   constructor(private service: ApiService, private FB: FormBuilder) { }
   ngOnInit() {
     {
@@ -30,11 +31,15 @@ export default class AddCourseComponent {
         courseImage:['',Validators.required]
       })
     }
+    this.getCourse()
 
     this.dropdownList = [
       { "item_id": 1, "item_text": '11th Class' },
       { "item_id": 2, "item_text": '12th Class' },
       { "item_id": 3, "item_text": 'Dropper' },
+      { "item_id": 4, "item_text": '8th Class' },
+      { "item_id": 5, "item_text": '9th Class' },
+      { "item_id": 6, "item_text": '10th Class' },
     ];
 
     this.dropdownSettings = {
@@ -63,7 +68,7 @@ export default class AddCourseComponent {
 
   handleSubmit() {
     if (this.courseForm.valid) {
-        this.loader = true;
+        this.sloader = true;
         const payLoad = {
             "title": this.courseForm.value.courseName,
             "image": this.wfile,
@@ -73,14 +78,15 @@ export default class AddCourseComponent {
         this.service.CourseService(payLoad).subscribe((res: any) => {
             if (res.status) {
                 this.getCourse();
+                this.courseForm.reset()
                 this.service.SuccessSnackbar(res.message);
             } else {
                 this.service.ErrorSnackbar('Something went wrong...!!');
             }
-            this.loader = false;
+            this.sloader = false;
         }, (err) => {
             this.service.ErrorSnackbar(err.message);
-            this.loader = false;
+            this.sloader = false;
         });
     } else {
         this.service.ErrorSnackbar('Form is invalid');
@@ -130,9 +136,12 @@ export default class AddCourseComponent {
   }
 
   handleDelete(id:number){
+    this.loader = true;
     this.service.courseDelete(id).subscribe((res) => {
       // console.log(res)
+      this.getCourse()
       this.service.SuccessSnackbar(res.message);
+      this.loader = false;
     } ,(err) => {
       this.service.ErrorSnackbar(err.message);
       this.loader = false;

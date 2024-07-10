@@ -27,7 +27,10 @@
        <textarea rows="3" cols="4" class="form-control" formControlName="description"></textarea>
     </div>
   </form>
-  <a type="submit" (click)="handleSubmit()" class="btn btn-primary w-25" width="100px">Submit</a>
+  <div class="spinner-border text-dark" role="status" *ngIf="this.sloader == true">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <a type="submit" (click)="handleSubmit()" class="btn btn-primary w-25" *ngIf="this.sloader == false" width="100px">Submit</a>
 
 </app-card>
 
@@ -54,7 +57,11 @@
         <td>{{list.description}}</td>
         <td>{{list.tags}}</td>
         <td><img src="https://paramapi.getmocktest.com/{{list.image.replace('wwwroot\\', '').replace('/\\/g', '/')}}" width="50px" height="50px"/></td>
-        <td><a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)"><i class="fa fa-trash"></i></a></td>
+        <td>
+          <div class="spinner-border text-dark" role="status" *ngIf="this.loader == true">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)" *ngIf="this.loader == false"><i class="fa fa-trash"></i></a></td>
       </tr>
     </tbody>
   </table>
