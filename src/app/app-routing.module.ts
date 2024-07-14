@@ -30,6 +30,10 @@ const routes: Routes = [
         loadComponent: () => import('./pages/about/about.component'),
       },
       {
+        path: 'contact',
+        loadComponent: () => import('./pages/contact/contact.component')
+      },
+      {
         path: 'maincourse/:id',
         loadComponent: () => import('./pages/course/course.component'),
       },
@@ -41,6 +45,7 @@ const routes: Routes = [
         path: 'login',
         loadComponent: () => import('./pages/login/login.component')
       },
+     
     ]
   },
 

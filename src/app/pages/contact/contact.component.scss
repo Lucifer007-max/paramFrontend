@@ -1,0 +1,145 @@
+.banner {
+    background-image: url("./../../../assets/images/contact-us/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 80px 40px;
+}
+
+.banner-content {
+    margin-left: 100px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.banner-heading {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.breadcrumb {
+    font-weight: 500;
+    background: 0 0;
+    padding: 0;
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .breadcrumb-item a {
+    color: #ffffff !important;
+    font-size: 14px;
+  }
+  
+  .breadcrumb-item+.breadcrumb-item::before {
+    color: #fff;
+  }
+
+  .connect {
+    background-color: #F1F8FF;
+    padding: 80px 100px;
+  }
+
+  .connect-card {
+    width: 350px;
+    height: 240px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card-icon {
+    background: #F1F8FF;
+    border-radius: 35px;
+    padding: 20px;
+  }
+
+  .contact-form {
+    background: url('../../../assets/images/contact-us/bg-form.png');
+    background-size: contain;
+  }
+
+  .form-header-title {
+    color: #E31E24;
+    font-size: 15px;
+  }
+
+  .form-header-info {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  .form-content {
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0px 8px 16px #92B8FF50;
+    border-radius: 5px;
+  }
+
+  .form-content input {
+    padding: 15px;
+  }
+
+  .send-button {
+    position: absolute;
+    bottom: -1rem;
+    left: 3rem;
+  }
+
+  .send-button button {
+    background-color: #E31E24;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+  
+  @media (max-width: 700px) {
+    .banner {
+      padding: 0px 40px;
+      background-position: -200px;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: 992px) {
+
+    .banner {
+      padding: 0px 40px;
+      background-size: cover;
+    }
+
+    .banner-content {
+      margin-left: 0px;
+    }
+
+    .form-content {
+      width: 100% !important;
+      padding: 10px !important;
+      box-shadow: none
+    }
+
+    .form-header {
+      padding: 1.5rem !important;
+    }
+
+    .form-header-info {
+      font-size: 1.5rem;
+    }
+
+    .send-button {
+      left: 12px;
+      bottom: -2rem;
+    }
+
+    .connect {
+      padding: 40px 80px !important;
+    }
+  }
