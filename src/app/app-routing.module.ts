@@ -45,6 +45,10 @@ const routes: Routes = [
         path: 'login',
         loadComponent: () => import('./pages/login/login.component')
       },
+      {
+        path: 'blogs',
+        loadComponent: () => import('./pages/blogs/blogs.component')
+      },
      
     ]
   },
