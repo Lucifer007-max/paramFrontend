@@ -98,3 +98,51 @@
     padding: 10px;
     border-radius: none !important;
   }
+
+  .card {
+    width: calc(50% - 20px);
+  }
+
+  @media (max-width: 700px) {
+    .banner {
+      padding: 0px 40px;
+      background-position: -200px;
+      background-size: cover;
+    }
+    .card {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+
+    .banner {
+      padding: 0px 40px;
+      background-size: cover;
+    }
+
+    .banner-content {
+      margin-left: 0px;
+    }
+
+    .main-container {
+      gap: 5 !important;
+    }
+
+    .blog-body {
+      padding: 20px !important;
+    }
+
+    .blogs-panel {
+      width: 100%;
+    }
+
+    .blogs-list {
+      padding: 0px !important;
+    }
+
+    .main-container {
+      flex-direction: column;
+    }
+    
+  }
