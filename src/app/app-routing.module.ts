@@ -108,12 +108,12 @@ const routes: Routes = [
       },
       
       {
-        path: 'home',
-        loadComponent: () => import('./admin/authentication/sign-up/sign-up.component'),
+        path: 'dashboard',
+        loadComponent: () => import('./student/dashboard/dashboard.component'),
 
       },
       {
-        path: 'student',
+        path: 'course',
         loadComponent: () => import('./admin/authentication/sign-in/sign-in.component')
       }
     ]

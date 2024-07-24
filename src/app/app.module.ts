@@ -68,7 +68,7 @@ import { StudentNavRightComponent } from './theme/layout/student/nav-bar/nav-rig
     StudentNavGroupComponent,
     StudentNavCollapseComponent,
     StudentNavLeftComponent,
-    StudentNavRightComponent
+    StudentNavRightComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule , HttpClientModule,     NgMultiSelectDropDownModule.forRoot()
   ],
