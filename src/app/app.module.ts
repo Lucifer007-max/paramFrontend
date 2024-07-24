@@ -33,6 +33,14 @@ import { AuthGuard } from 'src/guard/authguard.guard';
 import { StudentComponent } from './theme/layout/student/student.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { AboutComponent } from './pages/about/about.component';
+import { StudentNavContentComponent } from './theme/layout/student/navigation/nav-content/nav-content.component';
+import { StudentNavItemComponent } from './theme/layout/student/navigation/nav-content/nav-item/nav-item.component';
+import { StudentNavGroupComponent } from './theme/layout/student/navigation/nav-content/nav-group/nav-group.component';
+import { StudentNavCollapseComponent } from './theme/layout/student/navigation/nav-content/nav-collapse/nav-collapse.component';
+import { StudentNavigationComponent } from './theme/layout/student/navigation/navigation.component';
+import { StudentNavBarComponent } from './theme/layout/student/nav-bar/nav-bar.component';
+import { StudentNavLeftComponent } from './theme/layout/student/nav-bar/nav-left/nav-left.component';
+import { StudentNavRightComponent } from './theme/layout/student/nav-bar/nav-right/nav-right.component';
 // import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
@@ -56,8 +64,14 @@ import { AboutComponent } from './pages/about/about.component';
     NotFoundComponent,
     StudentComponent,
     AboutComponent,
-
-
+    StudentNavBarComponent,
+    StudentNavigationComponent,
+    StudentNavContentComponent,
+    StudentNavItemComponent,
+    StudentNavGroupComponent,
+    StudentNavCollapseComponent,
+    StudentNavLeftComponent,
+    StudentNavRightComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule , HttpClientModule,     NgMultiSelectDropDownModule.forRoot()
   ],

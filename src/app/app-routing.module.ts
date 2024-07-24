@@ -84,6 +84,12 @@ const routes: Routes = [
     component: StudentComponent,
     children: [
       {
+        path: '',
+        redirectTo: '',
+        pathMatch: 'full'
+      },
+      
+      {
         path: 'home',
         loadComponent: () => import('./admin/authentication/sign-up/sign-up.component'),
 
