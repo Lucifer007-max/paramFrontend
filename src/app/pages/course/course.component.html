@@ -3,10 +3,10 @@
 <section class="page-title" style="background-image: url(https://jufailitech.com/envatoitems/LMSOne/html/images/background/pattern-10.png)">
   <div class="pattern-layer" style="background-image: url(images/background/pattern-9.png)"></div>
   <div class="auto-container">
-    <h2 style="color: white">Course</h2>
+    <h2 style="color: white">{{this.URLId.toUpperCase()}}</h2>
     <ul class="bread-crumb p-0">
       <li><a href="/">Home</a></li>
-      <li>Course</li>
+      <li>{{this.URLId.toUpperCase()}}</li>
     </ul>
   </div>
 </section>
@@ -121,11 +121,6 @@
   </div>
 </div>
 
-
-
-
-
-
 <div class="container text-center mt-5" style="margin-top: 5% !important; display:none;">
   <h2 class="mb-3">Course We Offer</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, expedita!</p>
@@ -148,8 +143,6 @@
     </div>
   </div>
 </div>
-
-
 
 <section style="background-color: #e0e0e0; padding:5% 0; display:none;">
 
@@ -188,206 +181,43 @@
   <div class="container mt-5 card_conatiner">
     <div class="row justify-content-center align-items-center ">
 
-
-        <div class="col-md-4  col-sm-6 mb-4">
-          <div class="card border-0 bg-icon  h-100">
-            <div class="card-body text-left">
-            <div class="img_div">
-              <h5 class="card-title m-0">Study Material</h5>
-              <img src="assets/studymaterial.png" class="img_" />
-            </div>
-            <p></p>
-            <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Condimentum lorem.</p> -->
-            <a class="btn btn-link px-0 text-danger">View More &#43;</a>
+      <!-- Card 1 -->
+      <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-1">
+        <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 1"> -->
+        <img src="assets/studymaterial.png" class="card-img-right" />
+        <div class="card-body">
+            <h5 class="card-title">Study Material</h5>
+            <p class="card-text">Equip yourself with quality study material.</p>
+            <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
           </div>
         </div>
 
+        <!-- Card 2 -->
+        <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-2">
+          <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 2"> -->
+          <img src="assets/Elearn.png" class="card-img-right"/>
 
-
-
-        <table class="table table-bordered table-hover" *ngIf="this.URLId == 'neet'">
-          <thead class="thead-dark">
-            <tr>
-              <th>Course Name</th>
-              <th>Price (₹)</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Math</td>
-              <td>5000</td>
-              <td><a routerLink="/course/7" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Physics</td>
-              <td>7500</td>
-              <td><a routerLink="/course/7" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Bio</td>
-              <td>10000</td>
-              <td><a routerLink="/course/7" >Click here</a></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table table-bordered table-hover" *ngIf="this.URLId == 'iit'">
-          <thead class="thead-dark">
-            <tr>
-              <th>Course Name</th>
-              <th>Price (₹)</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Physics</td>
-              <td>7500</td>
-              <td><a routerLink="/course/6" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Math</td>
-              <td>5000</td>
-              <td><a routerLink="/course/6" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Advance Math</td>
-              <td>10000</td>
-              <td><a routerLink="/course/6" >Click here</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-md-4  col-sm-6 mb-4">
-        <div class="card border-0 h-100 bg-blue bg-icon text-white">
-          <div class="card-body text-left">
-            <div class="img_div">
-              <h5 class="card-title m-0">Online Lectures</h5>
-              <img src="assets/Elearn.png" class="img_"/>
-            </div>
-            <p></p>
-            <a class="btn btn-link px-0 text-white">View More &#43;</a>
+          <div class="card-body">
+            <h5 class="card-title">Online Lectures</h5>
+            <p class="card-text">Empower your learning journey with the flexibility.</p>
+            <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
           </div>
         </div>
-        <table class="table table-bordered table-hover" *ngIf="this.URLId == 'neet'">
-          <thead class="thead-dark">
-            <tr>
-              <th>Course Name</th>
-              <th>Price (₹)</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Math</td>
-              <td>500</td>
-              <td><a routerLink="/course/7" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Physics</td>
-              <td>750</td>
-              <td><a routerLink="/course/7" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Bio</td>
-              <td>1000</td>
-              <td><a routerLink="/course/7" >Click here</a></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table table-bordered table-hover" *ngIf="this.URLId == 'iit'">
-          <thead class="thead-dark">
-            <tr>
-              <th>Course Name</th>
-              <th>Price (₹)</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Physics</td>
-              <td>700</td>
-              <td><a routerLink="/course/6" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Math</td>
-              <td>500</td>
-              <td><a routerLink="/course/6" >Click here</a></td>
-            </tr>
-            <tr>
-              <td>Advance Math</td>
-              <td>1000</td>
-              <td><a routerLink="/course/6" >Click here</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-md-4  col-sm-6 mb-4">
-        <div class="card border-0 h-100 bg-danger bg-icon  text-white">
-          <div class="card-body text-left">
-            <div class="img_div">
-              <h5 class="card-title m-0">Test Series</h5>
-              <img src="assets/testseries.png" class="img_"/>
-            </div>
-            <p></p>
-              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. A quis tristique a quam.</p> -->
-              <a  class="btn btn-link px-0 text-wite">View More &#43;</a>
-            </div>
-          </div>
-          <table class="table table-bordered table-hover" *ngIf="this.URLId == 'neet'">
-            <thead class="thead-dark">
-              <tr>
-                <th>Course Name</th>
-                <th>Price (₹)</th>
-                <th>Link</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Math</td>
-                <td>200</td>
-                <td><a routerLink="/course/7" >Click here</a></td>
-              </tr>
-              <tr>
-                <td>Physics</td>
-                <td>300</td>
-                <td><a routerLink="/course/7" >Click here</a></td>
-              </tr>
-              <tr>
-                <td>Bio</td>
-                <td>400</td>
-                <td><a routerLink="/course/7" >Click here</a></td>
-              </tr>
-            </tbody>
-          </table>
 
-          <table class="table table-bordered table-hover" *ngIf="this.URLId == 'iit'">
-            <thead class="thead-dark">
-              <tr>
-                <th>Course Name</th>
-                <th>Price (₹)</th>
-                <th>Link</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Physics</td>
-                <td>500</td>
-                <td><a routerLink="/course/6" >Click here</a></td>
-              </tr>
-              <tr>
-                <td>Math</td>
-                <td>500</td>
-                <td><a routerLink="/course/6" >Click here</a></td>
-              </tr>
-              <tr>
-                <td>Advance Math</td>
-                <td>500</td>
-                <td><a routerLink="/course/6" >Click here</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Card 3 -->
+        <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-3">
+          <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 3"> -->
+          <img src="assets/testseries.png" class="card-img-right"/>
+
+          <div class="card-body">
+            <h5 class="card-title">Online Test</h5>
+            <p class="card-text">Prepare, click, succeed – the essence of online testing</p>
+            <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
+          </div>
         </div>
+  
+
+        <h2 *ngIf="this.URLId != 'neet'||'iit-jee'" class="text-center text-info">Course Price and other Data will Comming Soon..!</h2>
     </div>
   </div>
 </div>
@@ -559,7 +389,7 @@
 
 
 
-<div class="container mt-5" *ngIf="this.URLId == 'iit'">
+<div class="container mt-5" *ngIf="this.URLId == 'iit - jee'">
   <h3 class="border-bottom mb-2 pb-2 text-center">FAQ'S For IIT</h3>
 
   <div class="accordion" id="iitAccordion">
@@ -567,7 +397,7 @@
     <!-- Section 1: What are IITs? -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne1">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
           What are IITs?
         </button>
       </h2>
@@ -575,9 +405,39 @@
         <div class="accordion-body">
           <p>IITs, or Indian Institutes of Technology, are a group of autonomous public technical and research universities in India. They are renowned for their engineering, science, and technology education, as well as their research contributions.</p>
           <p>As of now, there are 23 IITs in total, offering undergraduate, postgraduate, and doctoral programs in various branches of engineering, science, and technology.</p>
+
+          <ol>
+            <li>IIT Kharagpur</li>
+            <li>IIT Bombay</li>
+            <li>IIT Madras</li>
+            <li>IIT Kanpur</li>
+            <li>IIT Delhi</li>
+            <li>IIT Roorkee</li>
+            <li>IIT Guwahati</li>
+            <li>IIT Varanasi (BHU)</li>
+            <li>IIT Bhubaneswar</li>
+            <li>IIT Gandhinagar</li>
+            <li>IIT Hyderabad</li>
+            <li>IIT Jodhpur</li>
+            <li>IIT Patna</li>
+            <li>IIT Ropar</li>
+            <li>IIT Indore</li>
+            <li>IIT Mandi</li>
+            <li>IIT (ISM) Dhanbad</li>
+            <li>IIT Palakkad</li>
+            <li>IIT Tirupati</li>
+            <li>IIT Bhilai</li>
+            <li>IIT Goa</li>
+            <li>IIT Jammu</li>
+            <li>IIT Dharwad</li>
+        </ol>
+        <p>
+          Each IIT offers undergraduate, postgraduate, and doctoral programs in various branches of engineering, science, and technology. They are highly selective in their admissions, with the JEE Advanced exam serving as the primary gateway for undergraduate admissions.
+        </p>
         </div>
       </div>
     </div>
+
 
     <!-- Section 2: Why getting admission in IIT is important? -->
     <div class="accordion-item">
@@ -600,73 +460,10 @@
       </div>
     </div>
 
-    <!-- Section 3: Autonomous nature of IITs -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree3">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
-          Autonomous Nature of IITs
-        </button>
-      </h2>
-      <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3" data-bs-parent="#iitAccordion">
-        <div class="accordion-body">
-          <p>IITs are autonomous institutions, which means:</p>
-          <ul>
-            <li>They have the freedom to design and update their curriculum based on industry needs and advancements in technology.</li>
-            <li>They can make administrative and academic decisions independently, without direct interference from the government.</li>
-            <li>This autonomy allows them to maintain high standards of education and research, adapting quickly to changing technological landscapes.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 4: Research and Development at IITs -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFour4">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
-          Research and Development at IITs
-        </button>
-      </h2>
-      <div id="collapseFour4" class="accordion-collapse collapse" aria-labelledby="headingFour4" data-bs-parent="#iitAccordion">
-        <div class="accordion-body">
-          <p>IITs are recognized for their contributions to research and development:</p>
-          <ul>
-            <li>They undertake cutting-edge research projects funded by government agencies and industry partners.</li>
-            <li>The research spans various fields including science, technology, engineering, and interdisciplinary studies.</li>
-            <li>IIT researchers collaborate internationally and publish influential papers contributing to global knowledge.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 5: Alumni Network and Placements -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFive5">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive5" aria-expanded="false" aria-controls="collapseFive5">
-          Alumni Network and Placements
-        </button>
-      </h2>
-      <div id="collapseFive5" class="accordion-collapse collapse" aria-labelledby="headingFive5" data-bs-parent="#iitAccordion">
-        <div class="accordion-body">
-          <p>IITs boast a strong alumni network and excellent placement records:</p>
-          <ul>
-            <li>Graduates from IITs form a prestigious global network contributing to various sectors.</li>
-            <li>IITs have structured placement processes attracting top companies across IT/software, core engineering, consulting, finance, and research sectors.</li>
-            <li>Companies like Google, Microsoft, Tata Motors, and McKinsey actively recruit from IITs, offering internships and full-time positions.</li>
-            <li>Many students secure Pre-Placement Offers (PPOs) based on their internship performances, highlighting their skills and capabilities.</li>
-            <li>IITs support entrepreneurship with dedicated cells and incubation centers fostering innovation and startup ventures.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-
-
-
       <!-- Section 1: JEE Main 2025 Eligibility Criteria -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingMain">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMain" aria-expanded="true" aria-controls="collapseMain">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMain" aria-expanded="true" aria-controls="collapseMain">
             JEE Main 2025 Eligibility Criteria
           </button>
         </h2>
@@ -774,16 +571,49 @@
 
 
 
-         <!-- Tip 1: Clear Understanding of Syllabus and Exam Pattern -->
+         <!-- Tip 1: How to prepare for IIT? -->
          <div class="accordion-item">
           <h2 class="accordion-header" id="headingSyllabus">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSyllabus" aria-expanded="true" aria-controls="collapseSyllabus">
-              Clear Understanding of Syllabus and Exam Pattern
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSyllabus" aria-expanded="true" aria-controls="collapseSyllabus">
+              How to prepare for IIT?
             </button>
           </h2>
           <div id="collapseSyllabus" class="accordion-collapse collapse" aria-labelledby="headingSyllabus" data-bs-parent="#preparationAccordion">
             <div class="accordion-body">
               <p>Familiarize yourself thoroughly with the syllabus and exam pattern of both JEE Main and JEE Advanced. Understand the weightage given to different topics and subjects.</p>
+
+              <ol>
+                <li>
+                    <strong>Clear Understanding of Syllabus and Exam Pattern:</strong> Familiarize yourself thoroughly with the syllabus and exam pattern of both JEE Main and JEE Advanced. Understand the weightage given to different topics and subjects.
+                </li>
+                <li>
+                    <strong>Effective Study Plan:</strong> Create a well-organized study plan that covers all subjects (Physics, Chemistry, Mathematics) and allocates sufficient time to each topic based on its importance and your understanding level. Stick to your study schedule consistently.
+                </li>
+                <li>
+                    <strong>Quality Study Material:</strong> Use recommended textbooks, reference books, and online resources that are widely regarded for JEE preparation. NCERT textbooks are excellent for building foundational concepts, while reference books like HC Verma (Physics), RD Sharma (Mathematics), and OP Tandon (Chemistry) can help in-depth understanding.
+                </li>
+                <li>
+                    <strong>Practice Regularly:</strong> Solve a wide variety of problems, including previous years' question papers and mock tests. Practice is crucial for mastering concepts, improving problem-solving skills, and getting familiar with the exam format and difficulty level.
+                </li>
+                <li>
+                    <strong>Clear Doubts Promptly:</strong> Do not let doubts linger. Seek help from teachers, peers, or online forums to clarify concepts and solve problems effectively. Addressing doubts promptly ensures a solid understanding of all topics.
+                </li>
+                <li>
+                    <strong>Mock Tests and Analysis:</strong> Take regular mock tests to simulate exam conditions and assess your preparation level. Analyze your performance to identify strengths and weaknesses. Focus more on weak areas and refine your exam strategy accordingly.
+                </li>
+                <li>
+                    <strong>Time Management:</strong> Develop effective time management skills during practice sessions and mock tests. Learn to allocate appropriate time to each section and question type to ensure you can complete the exam within the allotted time.
+                </li>
+                <li>
+                    <strong>Revision:</strong> Regularly revise concepts, formulas, and problem-solving techniques. Make concise notes or flashcards for quick revision closer to the exam date. Revision helps in retaining information and boosting confidence.
+                </li>
+                <li>
+                    <strong>Stay Healthy and Positive:</strong> Maintain a balanced lifestyle with adequate sleep, regular exercise, and a healthy diet. A healthy body and mind are essential for effective learning and concentration. Stay positive, manage stress effectively, and believe in your abilities.
+                </li>
+                <li>
+                    <strong>Stay Motivated and Persistent:</strong> The journey to cracking IIT JEE can be challenging and demanding. Stay motivated by setting realistic goals, celebrating small achievements, and visualizing your success. Be persistent in your efforts and stay committed to your study plan.
+                </li>
+            </ol>
             </div>
           </div>
         </div>
@@ -792,26 +622,96 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingStudyPlan">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudyPlan" aria-expanded="false" aria-controls="collapseStudyPlan">
-              Effective Study Plan
+              Why NEET Score is important ?
             </button>
           </h2>
           <div id="collapseStudyPlan" class="accordion-collapse collapse" aria-labelledby="headingStudyPlan" data-bs-parent="#preparationAccordion">
             <div class="accordion-body">
-              <p>Create a well-organized study plan that covers all subjects (Physics, Chemistry, Mathematics) and allocates sufficient time to each topic based on its importance and your understanding level. Stick to your study schedule consistently.</p>
+              <p>The NEET (National Eligibility cum Entrance Test) score in India is primarily useful for admission to undergraduate medical (MBBS) and dental (BDS) courses in government and private medical colleges across the country. Here are the main uses of the NEET score:.</p>
+
+              <ol>
+                <li>
+                    Admission to Medical and Dental Colleges: NEET is the mandatory entrance examination for admission to MBBS and BDS courses in all medical and dental colleges approved by the Medical Council of India (MCI) and the Dental Council of India (DCI), respectively.
+                </li>
+                <li>
+                    All India Quota (AIQ) Seats: NEET scores are used for filling 15% of the seats in all government medical and dental colleges in India under the All India Quota. This quota is applicable to students from all states except Jammu & Kashmir.
+                </li>
+                <li>
+                    State Quota Seats: State governments also use NEET scores for filling their respective state quota seats in government medical and dental colleges.
+                </li>
+                <li>
+                    Private Colleges and Deemed Universities: NEET scores are essential for admission to private medical and dental colleges, as well as deemed universities offering MBBS and BDS courses.
+                </li>
+                <li>
+                    Eligibility for Counselling: NEET scores determine eligibility for participating in centralized counselling conducted by the respective states, AIQ counselling conducted by the Medical Counselling Committee (MCC), and counselling conducted by private institutions.
+                </li>
+                <li>
+                    Scholarships and other Benefits: Some scholarships, awards, and other benefits for medical and dental education may also consider NEET scores as a criterion for eligibility.
+                </li>
+            </ol>
+            <p>
+              In essence, the NEET score is crucial for any student aspiring to pursue undergraduate medical or dental education in India, as it serves as the primary criterion for admission to most government and private institutions offering these courses. </p>
             </div>
           </div>
         </div>
 
-        <!-- Tip 3: Quality Study Material -->
+        <!-- Tip 3: Eligibility  -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingStudyMaterial">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudyMaterial" aria-expanded="false" aria-controls="collapseStudyMaterial">
-              Quality Study Material
+              Eligibility 
             </button>
           </h2>
           <div id="collapseStudyMaterial" class="accordion-collapse collapse" aria-labelledby="headingStudyMaterial" data-bs-parent="#preparationAccordion">
             <div class="accordion-body">
-              <p>Use recommended textbooks, reference books, and online resources that are widely regarded for JEE preparation. NCERT textbooks for foundational concepts, and books like HC Verma (Physics), RD Sharma (Mathematics), and OP Tandon (Chemistry) for in-depth understanding.</p>
+              <ol>
+                <li>
+                    <strong>Nationality:</strong>
+                    <ul>
+                        <li>Indian Nationals</li>
+                        <li>Non-Resident Indians (NRIs)</li>
+                        <li>Overseas Citizen of India (OCI)</li>
+                        <li>Persons of Indian Origin (PIO)</li>
+                        <li>Foreign Nationals</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Age Limit:</strong>
+                    <ul>
+                        <li>The minimum age limit is 17 years as on 31st December of the year of admission.</li>
+                        <li>There is no upper age limit for NEET.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Qualification Criteria:</strong>
+                    <ul>
+                        <li>Candidates must have passed or are appearing for the 10+2 or equivalent examination with Physics, Chemistry, Biology/Biotechnology, and English as core subjects.</li>
+                        <li>The qualifying examination should be from a recognized board or university.</li>
+                        <li>Candidates must have obtained a minimum aggregate of 50% marks in Physics, Chemistry, and Biology/Biotechnology (for general category) in the qualifying examination. For SC/ST/OBC-NCL candidates, the minimum aggregate required is 40%. For PwD candidates, it is 45%.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Attempts:</strong>
+                    <ul>
+                        <li>Candidates can attempt NEET a maximum of three times until they reach the upper age limit.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>State Eligibility:</strong>
+                    <ul>
+                        <li>Some states may have additional eligibility criteria, such as domicile requirements, which candidates must fulfill to be eligible for state quota seats.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Admission and Counselling:</strong>
+                    <ul>
+                        <li>Candidates must also satisfy the eligibility criteria laid down by respective authorities in the states/UTs/institutions for admission and counseling.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>
+              It's important for candidates to regularly check the official NEET website or NTA notifications for any updates or changes in the eligibility criteria. Meeting these criteria ensures that candidates can appear for NEET and compete for admission to undergraduate medical (MBBS) and dental (BDS) courses in India.
+            </p>
             </div>
           </div>
         </div>

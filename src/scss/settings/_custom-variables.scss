@@ -143,7 +143,11 @@ $spacers: (
   2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3
+  5: $spacer * 3,
+  6: $spacer * 4,
+  8: $spacer * 5,
+  10: $spacer * 6,
+  12: $spacer * 8,
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.

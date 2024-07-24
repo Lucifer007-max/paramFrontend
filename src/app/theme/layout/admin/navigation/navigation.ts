@@ -68,7 +68,21 @@ export const NavigationItems: NavigationItem[] = [
         type: 'item',
         url: '/admin/add-testimonial',
         external: true
-      }
+      },
+      {
+        id: 'product',
+        title: 'Product Management',
+        type: 'item',
+        url: '/admin/merchandise-management',
+        icon: 'feather icon-cloth'
+      },
+      {
+        id: 'about',
+        title: 'About Management',
+        type: 'item',
+        url: '/admin/about-management',
+        icon: 'feather icon-cog'
+      },
     ]
   }
   // {

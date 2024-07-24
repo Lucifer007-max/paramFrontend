@@ -3,7 +3,7 @@
     <div class="row w-100">
       <div class="col-lg-6 col-12 padding_0">
         <div class="d-flex justify-content-center align-items-center">
-          <div> <span class="mx-2 text-light position-relative">Call:</span><span class="text-light">1234567890</span> </div>
+          <div> <span class="mx-2 text-light position-relative">Call:</span><a href="tel:8055055001" class="text-light">8055055001</a> </div>
           <span class="line_white"></span>
           <div class="d-flex">
             <p class="d-inline m-0 mx-2 text-light">Follow Us: </p>
@@ -26,7 +26,7 @@
       </div>
       <div class="col-lg-6 col-12">
         <div class="float-end">
-          <a class="mx-1 text_light"><i class="fab fa-signup"></i>Login</a>
+          <a class="mx-1 text_light" routerLink="/login"><i class="fab fa-signup"></i>Login</a>
           <a class="mx-1 text_light"><i class="fa fa-login"></i>Register</a>
         </div>
       </div>
@@ -35,7 +35,7 @@
 </nav>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="" href="#"><img src="../../../../../assets/logo.png" /></a>
+    <a class="" routerLink="/"><img src="../../../../../assets/logo.png" width="150" /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -78,47 +78,32 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link"  routerLink="/" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#" role="button">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">
             About PARAM
           </a>
         </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link " routerLink="course" routerLinkActive="active">
-            Course
-          </a>
-          <ul class="dropdown-menu"> dropdown-toggle role="button" data-bs-toggle="dropdown" aria-expanded="false"
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
         <li class="nav-item">
-          <a class="nav-link" aria-disabled="true">Study Abroad</a>
+          <a class="nav-link">Study Abroad</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-disabled="true">Shop</a>
+          <a class="nav-link">Shop</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-disabled="true">Blogs</a>
+          <a class="nav-link" routerLink="/blogs" routerLinkActive="active" >Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-disabled="true">Contact Us</a>
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
         </li>
         <li class="nav-item position-relative">
-          <a class="nav-link" aria-disabled="true"><i class="fa fa-shopping-cart"></i><span class="cart_count bg-danger">0</span></a>
+          <a class="nav-link"><i class="fa fa-shopping-cart"></i><span class="cart_count bg-danger">0</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-disabled="true"><i class="fa fa-search"></i></a>
+          <a class="nav-link"><i class="fa fa-search"></i></a>
         </li>
       </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
     </div>
   </div>
 </nav>

@@ -1,0 +1,33 @@
+.form-container {
+    width: 400px;
+}
+
+@media(max-width : 425px)  {
+    .form-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.logo {
+    width: 200px;
+}
+
+.top-border-hue {
+    border-top: 10px solid #0E4D85;
+}
+
+.login-container {
+    margin-top: 2rem;
+}
+
+.login {
+    background: linear-gradient(90deg, #FF5370,#f88247);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 20px;
+}
