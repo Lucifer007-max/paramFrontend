@@ -49,7 +49,11 @@ const routes: Routes = [
         path: 'blogs',
         loadComponent: () => import('./pages/blogs/blogs.component')
       },
-     
+      {
+        path: 'study-abroad',
+        loadComponent: () => import('./pages/study-abroad/study-abroad.component')
+      },
+
     ]
   },
 
@@ -106,7 +110,7 @@ const routes: Routes = [
         redirectTo: '',
         pathMatch: 'full'
       },
-      
+
       {
         path: 'dashboard',
         loadComponent: () => import('./student/dashboard/dashboard.component'),
@@ -118,6 +122,8 @@ const routes: Routes = [
       }
     ]
   },
+
+
   {path:'**' ,  component:NotFoundComponent},
 ];
 
