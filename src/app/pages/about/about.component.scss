@@ -1,0 +1,135 @@
+.banner {
+    background-image: url("./../../../assets/images/contact-us/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 80px 40px;
+}
+
+.banner-content {
+    margin-left: 100px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.banner-heading {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.breadcrumb {
+    font-weight: 500;
+    background: 0 0;
+    padding: 0;
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .breadcrumb-item {
+    display: inline ;
+    width: auto;
+  }
+
+  .breadcrumb-item a {
+    color: #ffffff !important;
+    font-size: 14px;
+  }
+  
+  .breadcrumb-item+.breadcrumb-item::before {
+    color: #fff;
+  }
+  .main-content {
+    display: flex;
+    padding: 60px;
+  }
+  
+  .sidebar {
+    width: 350px;
+    margin-right: 20px;
+  
+    .menu-item {
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.3s;
+  
+      &.active {
+        background-color: red;
+        color: #fff;
+      }
+  
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-right: 0;
+  
+      .menu-item {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+    }
+  }
+  
+  .content {
+    flex-grow: 1;
+    width: calc(100% - 350px);
+  
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+      margin-bottom: 20px;
+  
+      &:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      .card-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+  
+      .card-content {
+        padding: 20px;
+  
+        .card-title {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+  
+        .card-text {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+  
+      .sidebar {
+        order: 1;
+      }
+  
+      .content {
+        order: 2;
+      }
+    }
+  }
