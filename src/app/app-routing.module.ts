@@ -53,7 +53,10 @@ const routes: Routes = [
         path: 'study-abroad',
         loadComponent: () => import('./pages/study-abroad/study-abroad.component')
       },
-
+      {
+        path: 'shop',
+        loadComponent: () => import('./pages/shop/shop.component')
+      },
     ]
   },
 
