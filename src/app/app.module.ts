@@ -40,6 +40,8 @@ import { StudentNavGroupComponent } from './theme/layout/student/navigation/nav-
 import { StudentNavCollapseComponent } from './theme/layout/student/navigation/nav-content/nav-collapse/nav-collapse.component';
 import { StudentNavLeftComponent } from './theme/layout/student/nav-bar/nav-left/nav-left.component';
 import { StudentNavRightComponent } from './theme/layout/student/nav-bar/nav-right/nav-right.component';
+import { StudentService } from 'src/service/student.service';
+// import { StudyAbroadComponent } from './pages/study-abroad/study-abroad.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,7 @@ import { StudentNavRightComponent } from './theme/layout/student/nav-bar/nav-rig
     StudentNavCollapseComponent,
     StudentNavLeftComponent,
     StudentNavRightComponent,
+    // StudyAbroadComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule , HttpClientModule,     NgMultiSelectDropDownModule.forRoot()
   ],
@@ -76,6 +79,7 @@ import { StudentNavRightComponent } from './theme/layout/student/nav-bar/nav-rig
     AuthInterceptorProvider,
     AuthGuard,
     ApiService,
+    StudentService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

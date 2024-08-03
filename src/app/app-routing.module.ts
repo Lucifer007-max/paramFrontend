@@ -113,7 +113,7 @@ const routes: Routes = [
         redirectTo: '',
         pathMatch: 'full'
       },
-      
+
       {
         path: 'dashboard',
         loadComponent: () => import('./student/dashboard/dashboard.component'),
@@ -125,6 +125,8 @@ const routes: Routes = [
       }
     ]
   },
+
+
   {path:'**' ,  component:NotFoundComponent},
 ];
 
