@@ -1,0 +1,62 @@
+.banner {
+  background-image: url('./../../../assets/Study-Abroad.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 80px 40px;
+  position: relative;
+}
+.banner:before
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #11111178;
+
+}
+.banner-content {
+  margin-left: 100px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banner-heading {
+  font-size: 42px;
+  color: #ffffff;
+  z-index: 9;
+  position: relative;
+  font-weight: 500;
+}
+
+.breadcrumb {
+  font-weight: 500;
+  background: 0 0;
+  padding: 0;
+  z-index: 9;
+  position: relative;
+  font-size: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+.breadcrumb-item {
+  display: inline;
+  width: auto;
+}
+
+.breadcrumb-item a {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}
+.align-items-center {
+  align-items: center !important;
+}

@@ -21,7 +21,7 @@ export interface NavigationItem {
 export const NavigationItems: NavigationItem[] = [
   {
     id: 'navigation',
-    title: 'Navigation',
+    title: '',
     type: 'group',
     icon: 'icon-group',
     children: [
@@ -46,45 +46,96 @@ export const NavigationItems: NavigationItem[] = [
         url: '/admin/add-course',
         icon: 'feather icon-book'
       },
+      // {
+      //   id: 'subject',
+      //   title: 'Add Subject',
+      //   type: 'item',
+      //   url: '/admin/add-subject',
+      //   icon: 'feather icon-book'
+      // // },
+      {
+        id: 'notes',
+        title: 'Add Notes',
+        type: 'item',
+        url: '/admin/add-notes',
+        icon: 'feather icon-book'
+      },
+      {
+        id: 'notes',
+        title: 'Add Test Series',
+        type: 'item',
+        url: '/admin/add-test',
+        icon: 'feather icon-book'
+      },
 
     ]
   },
   {
-    id: 'banner',
+    id: 'Onlinelectures',
+    title: 'Online Lectures',
+    type: 'collapse',
+    icon: 'feather icon-menu',
+    children: [
+      {
+        id: 'addonline-lectures',
+        title: 'Create Online Lectures',
+        type: 'item',
+        url: '/admin/add-online-lectures',
+        // external: false
+      },
+
+    ]
+  },
+  {
+    id: 'mastermng',
     title: 'Master Mangement',
     type: 'collapse',
     icon: 'feather icon-menu',
     children: [
       {
         id: 'menu-level-2.1',
-        title: 'Banner Mangement',
+        title: 'Manage Banner',
         type: 'item',
         url: '/admin/add-banner',
-        external: true
+        // external: true
       },
       {
         id: 'menu-level-2.2',
-        title: 'Testimonial Management',
+        title: 'Manage Testimonial',
         type: 'item',
         url: '/admin/add-testimonial',
-        external: true
+        // external: true
       },
       {
         id: 'product',
-        title: 'Product Management',
+        title: 'Manage Product',
         type: 'item',
         url: '/admin/merchandise-management',
-        icon: 'feather icon-cloth'
+        // icon: 'feather icon-cloth'
       },
       {
         id: 'about',
-        title: 'About Management',
+        title: 'Manage Abroad',
         type: 'item',
         url: '/admin/about-management',
-        icon: 'feather icon-cog'
+        // icon: 'feather icon-cog'
+      },
+      {
+        id: 'logo',
+        title: 'Manage Logo',
+        type: 'item',
+        url: '/admin/add-logo',
+        // icon: 'feather icon-cog'
       },
     ]
-  }
+  },
+  {
+    id: 'blog',
+    title: 'Blog',
+    type: 'item',
+    url: '/admin/add-blog',
+    icon: 'feather icon-home'
+  },
   // {
   //   id: 'ui-component',
   //   title: 'Ui Component',

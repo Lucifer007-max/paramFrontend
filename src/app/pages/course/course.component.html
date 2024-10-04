@@ -2,46 +2,45 @@
 
 <section class="page-title" style="background-image: url(https://jufailitech.com/envatoitems/LMSOne/html/images/background/pattern-10.png)">
   <div class="pattern-layer" style="background-image: url(images/background/pattern-9.png)"></div>
-  <div class="auto-container">
-    <h2 style="color: white">{{this.URLId.toUpperCase()}}</h2>
+  <div class="auto-container position-relative ">
+    <h2 style="color: white">{{this.courseList.title.toUpperCase()}}</h2>
     <ul class="bread-crumb p-0">
       <li><a href="/">Home</a></li>
-      <li>{{this.URLId.toUpperCase()}}</li>
+      <li>{{this.courseList.title.toUpperCase()}}</li>
     </ul>
   </div>
 </section>
 
-<div class="container course-container d-none">
+<div class="container course-container ">
   <div class="row">
-    <a href="/course/1">
+    <a routerLink="/study-material/{{this.URLId}}" >
       <div class="box-class col-12 col-md-12 d-md-flex mt-3">
-        <div class="col-12 col-md-4 video-box pt-2 me-0 me-md-4">
+        <div class="col-12 col-md-4  pt-2 me-0 me-md-4">
           <img
-            src="https://assets.technologynetworks.com/production/dynamic/images/content/381532/synthetic-biology-natures-tools-redesigned-381532-1280x720.webp?cb=12576265"
-            class="img-fluid"
+            src="assets/studymaterial.png"
+            class="img-fluid d-block m-auto"
           />
         </div>
         <div class="col-12 col-md-8 ps-0 ps-md-3 mt-2">
           <div class="d-md-flex justify-content-between mb-2">
-            <h3 class="class-header" id="courseTitle1">11th Biology</h3>
+            <h3 class="class-header" id="courseTitle1">ONLINE NOTES</h3>
           </div>
           <div class="mb-2 class-desc"></div>
           <div class="d-flex col-12 col-md-8 justify-content-center mb-4"> </div>
 
-          <div class="justify-content-start spe-price">Special Discounted Price</div>
+          <!-- <div class="justify-content-start spe-price">Special Discounted Price</div> -->
 
           <div class="d-md-flex justify-content-between">
-            <div class="d-flex justify-content-between col-md-5">
+            <!-- <div class="d-flex justify-content-between col-md-5">
               <div class="class-price" id="evnCoursePrice1"> ₹ 500 </div>
               <div class="class-old-price"><del>₹ 2999</del></div>
               <div class="class-price-off">33% OFF</div>
-            </div>
+            </div> -->
 
             <div class="float-end me-md-4">
-              <div class="font-fam-med font-16 col-4">
+              <div class="font-fam-med font-16 col-12">
                 <span class="expCourse" id="evn_explore1"
-                  ><button type="button" class="btn btn-block btn-primary px-4 px-md-5">Explore</button></span
-                >
+                  ><button type="button" class="btn btn-block btn-primary">Know More</button></span>
               </div>
             </div>
           </div>
@@ -50,32 +49,32 @@
     </a>
     <a href="/">
       <div class="box-class col-12 col-md-12 d-md-flex mt-3">
-        <div class="col-12 col-md-4 video-box pt-2 me-0 me-md-4">
+        <div class="col-12 col-md-4 pt-2 me-0 me-md-4">
           <img
-            src="https://images.squarespace-cdn.com/content/v1/586ec16bb3db2b558ebfec60/694329ee-2cd8-4786-9406-77ca00f30b07/math-header.jpg"
-            class="img-fluid"
+            src="assets/Elearn.png"
+            class="img-fluid d-block m-auto"
           />
         </div>
         <div class="col-12 col-md-8 ps-0 ps-md-3 mt-2">
           <div class="d-md-flex justify-content-between mb-2">
-            <h3 class="class-header" id="courseTitle1">11th Advance Math</h3>
+            <h3 class="class-header" id="courseTitle1">ONLINE LECTURES</h3>
           </div>
           <div class="mb-2 class-desc"></div>
           <div class="d-flex col-12 col-md-8 justify-content-center mb-4"> </div>
 
-          <div class="justify-content-start spe-price">Special Discounted Price</div>
+          <!-- <div class="justify-content-start spe-price">Special Discounted Price</div> -->
 
           <div class="d-md-flex justify-content-between">
-            <div class="d-flex justify-content-between col-md-5">
+            <!-- <div class="d-flex justify-content-between col-md-5">
               <div class="class-price" id="evnCoursePrice1"> ₹ 500 </div>
               <div class="class-old-price"><del>₹ 2999</del></div>
               <div class="class-price-off">33% OFF</div>
-            </div>
+            </div> -->
 
             <div class="float-end me-md-4">
-              <div class="font-fam-med font-16 col-4">
+              <div class="font-fam-med font-16 col-12">
                 <span class="expCourse" id="evn_explore1"
-                  ><button type="button" class="btn btn-block btn-primary px-4 px-md-5">Explore</button></span
+                  ><button type="button" class="btn btn-block btn-primary">Know More</button></span
                 >
               </div>
             </div>
@@ -83,34 +82,34 @@
         </div>
       </div>
     </a>
-    <a href="/">
+    <a routerLink="/test/{{this.URLId}}">
       <div class="box-class col-12 col-md-12 d-md-flex mt-3">
-        <div class="col-12 col-md-4 video-box pt-2 me-0 me-md-4">
+        <div class="col-12 col-md-4 pt-2 me-0 me-md-4">
           <img
-            src="https://cmsv2-assets.apptegy.net/uploads/12837/file/1394965/86a7f4dc-5aba-4456-967d-1bfbc3d4aa01.jpeg"
-            class="img-fluid"
+            src="assets/testseries.png"
+            class="img-fluid d-block m-auto w-50"
           />
         </div>
         <div class="col-12 col-md-8 ps-0 ps-md-3 mt-2">
           <div class="d-md-flex justify-content-between mb-2">
-            <h3 class="class-header" id="courseTitle1">11th Basic Math</h3>
+            <h3 class="class-header" id="courseTitle1">ONLINE TEST SERIES</h3>
           </div>
           <div class="mb-2 class-desc"></div>
           <div class="d-flex col-12 col-md-8 justify-content-center mb-4"> </div>
 
-          <div class="justify-content-start spe-price">Special Discounted Price</div>
+          <!-- <div class="justify-content-start spe-price">Special Discounted Price</div> -->
 
           <div class="d-md-flex justify-content-between">
-            <div class="d-flex justify-content-between col-md-5">
+            <!-- <div class="d-flex justify-content-between col-md-5">
               <div class="class-price" id="evnCoursePrice1"> ₹ 500 </div>
               <div class="class-old-price"><del>₹ 2999</del></div>
               <div class="class-price-off">33% OFF</div>
-            </div>
+            </div> -->
 
             <div class="float-end me-md-4">
-              <div class="font-fam-med font-16 col-4">
+              <div class="font-fam-med font-16 col-12">
                 <span class="expCourse" id="evn_explore1"
-                  ><button type="button" class="btn btn-block btn-primary px-4 px-md-5">Explore</button></span
+                  ><button type="button" class="btn btn-block btn-primary">Know More</button></span
                 >
               </div>
             </div>
@@ -121,28 +120,6 @@
   </div>
 </div>
 
-<div class="container text-center mt-5" style="margin-top: 5% !important; display:none;">
-  <h2 class="mb-3">Course We Offer</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, expedita!</p>
-  <div class="row">
-    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let course of courseList">
-        <div class="card card-neet">
-          <div class="card-body p-0">
-              <img [src]="'https://paramapi.getmocktest.com/'+course.image.replace('wwwroot\\', '').replace('/\\/g', '/')" alt="NEET" class="card-img ">
-              <div class="p-4 mb-3">
-                <h5 class="card-title text-start">{{course.title}}</h5>
-                <div class="d-flex justify-content-start pills_data mb-3">
-                  <span *ngFor="let tag of course.tags.split(',')" class="badge badge-pill badge-light border_pills mx-1">
-                    {{ tag.trim() }}
-                  </span>
-                </div>
-                <a [routerLink]="course.id" class="btn btn-link float-start p-0">Know More <span>&rarr;</span></a>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
 
 <section style="background-color: #e0e0e0; padding:5% 0; display:none;">
 
@@ -157,7 +134,7 @@
             <p>{{ testimonial.description }}</p>
             <div class="d-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center">
-                <img [src]="'https://paramapi.getmocktest.com/'+testimonial.image.replace('wwwroot\\', '').replace('/\\/g', '/')"  alt="Student Image" class="w-25 avatar">
+                <img [src]="'http://paramapi.getmocktest.com/'+testimonial.image.replace('wwwroot\\', '').replace('/\\/g', '/')"  alt="Student Image" class="w-25 avatar">
                 <div class="text-center">
                   <h6 class="m-0 mx-3">{{ testimonial.title }}</h6>
                   <small>{{ testimonial.tag }}</small>
@@ -177,7 +154,7 @@
 
 
 
-<div class="section_1">
+<div class="section_1 d-none">
   <div class="container mt-5 card_conatiner">
     <div class="row justify-content-center align-items-center ">
 
@@ -188,7 +165,7 @@
         <div class="card-body">
             <h5 class="card-title">Study Material</h5>
             <p class="card-text">Equip yourself with quality study material.</p>
-            <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
+            <a routerLink="/study-material/{{this.URLId}}" class="btn btn-link px-0 text-danger">View More &#43;</a>
           </div>
         </div>
 
@@ -215,9 +192,9 @@
             <a routerLink="/course" class="btn btn-link px-0 text-danger">View More &#43;</a>
           </div>
         </div>
-  
 
-        <h2 *ngIf="this.URLId != 'neet'||'iit-jee'" class="text-center text-info">Course Price and other Data will Comming Soon..!</h2>
+
+        <h2 *ngIf="this.URLId != 'neet'||'iit-jee'" class="text-center text-info">{{this.courseList.description}}</h2>
     </div>
   </div>
 </div>
@@ -659,7 +636,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingStudyMaterial">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudyMaterial" aria-expanded="false" aria-controls="collapseStudyMaterial">
-              Eligibility 
+              Eligibility
             </button>
           </h2>
           <div id="collapseStudyMaterial" class="accordion-collapse collapse" aria-labelledby="headingStudyMaterial" data-bs-parent="#preparationAccordion">

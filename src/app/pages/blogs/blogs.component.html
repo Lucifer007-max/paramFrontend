@@ -15,48 +15,25 @@
 <section class="p-6 blog-body">
   <div class="d-flex main-container w-100">
     <section class="blogs-list px-4 bg-ssuccess flex-grow-1">
-      <div class="d-flex flex-wrap px-lg-4 w-100 justify-content-between">
-        <div class="card">
-          <img class="card-img-top" src="../../../assets/images/blogs/blog-1.jpg.png" alt="blog-1" />
-          <div class="card-body px-4">
-            <div class="d-flex gap-4">
-              <p class="d-flex align-items-center gap-2 text-secondary">
-                <img src="../../../assets/images/blogs/calendar-icon.png" alt="" /><span>November 08, 2024</span>
-              </p>
-              <p class="d-flex align-items-center gap-2 text-secondary">
-                <img src="../../../assets/images/blogs/tag-icon.png" alt="" /><span>Education</span>
-              </p>
+      <div class="row" *ngFor="let items of blogList">
+
+        <div class="col-lg-6">
+          <a routerLink="/blog-details/{{items.id}}">
+            <div class="card w-100">
+              <img class="card-img-top w-100" src="http://paramapi.getmocktest.com/{{items.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')}}" alt="blog-1" />
+              <div class="card-body px-4">
+                <div class="d-flex gap-4">
+                  <p class="d-flex align-items-center gap-2 text-secondary">
+                    <img src="../../../assets/images/blogs/calendar-icon.png" alt="" /><span>{{items.date}}</span>
+                  </p>
+                  <p class="d-flex align-items-center gap-2 text-secondary">
+                    <img src="../../../assets/images/blogs/tag-icon.png" alt="" /><span>Education</span>
+                  </p>
+                </div>
+                <p style="font-size: 20px"><strong>{{items.title}}</strong></p>
+              </div>
             </div>
-            <p style="font-size: 20px"><strong>Here Are The Things To Look For When Selecting An Online Course</strong></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="../../../assets/images/blogs/blog-1.jpg.png" alt="blog-1" />
-          <div class="card-body px-4">
-            <div class="d-flex gap-4">
-              <p class="d-flex align-items-center gap-2 text-secondary">
-                <img src="../../../assets/images/blogs/calendar-icon.png" alt="" /><span>November 08, 2024</span>
-              </p>
-              <p class="d-flex align-items-center gap-2 text-secondary">
-                <img src="../../../assets/images/blogs/tag-icon.png" alt="" /><span>Education</span>
-              </p>
-            </div>
-            <p style="font-size: 20px"><strong>Here Are The Things To Look For When Selecting An Online Course</strong></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="../../../assets/images/blogs/blog-1.jpg.png" alt="blog-1" />
-          <div class="card-body px-4">
-            <div class="d-flex gap-4">
-              <p class="d-flex align-items-center gap-2 text-secondary">
-                <img src="../../../assets/images/blogs/calendar-icon.png" alt="" /><span>November 08, 2024</span>
-              </p>
-              <p class="d-flex align-items-center gap-2 text-secondary">
-                <img src="../../../assets/images/blogs/tag-icon.png" alt="" /><span>Education</span>
-              </p>
-            </div>
-            <p style="font-size: 20px"><strong>Here Are The Things To Look For When Selecting An Online Course</strong></p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

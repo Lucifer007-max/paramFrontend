@@ -34,6 +34,23 @@ export class StudentService {
      .pipe(catchError(this.handleError.bind(this)));
   }
 
+  updateStudent(payload:any, id:any): Observable<any> {
+    const formData: FormData = new FormData();
+    for (const key in payload) {
+      if (payload.hasOwnProperty(key)) {
+        formData.append(key, payload[key]);
+        console.log(key, payload[key])
+      }
+    }
+
+    return this.httpClient.put(this.baseUrl + 'Student/'+ id, formData)
+     .pipe(catchError(this.handleError.bind(this)));
+  }
+
+  studentDelete(id: number): Observable<any> {
+    return this.httpClient.delete(this.baseUrl + 'Student/' + id)
+      .pipe(catchError(this.handleError.bind(this)));
+  }
 
   getStudent(): Observable<any> {
     return this.httpClient.get(this.baseUrl + 'Student')

@@ -1,1 +1,37 @@
-<p>dashboard works!</p>
+
+<div class="row">
+  <h2 class="mb-3">Hi, {{this.student.firstname}} {{ getGreeting() }}</h2>
+  <div class="col-md-6 col-xl-6">
+  <app-card [hidHeader]="true" cardClass="bg-c-blue order-card">
+    <h6 class="text-white">Total Notes</h6>
+    <h2 class="text-end text-white"
+      ><i class="feather icon-user float-start"></i><span>0</span>
+    </h2>
+  </app-card>
+  </div>
+  <div class="col-md-6 col-xl-6">
+  <app-card [hidHeader]="true" cardClass="bg-c-green order-card">
+    <h6 class="text-white">Total Lectures</h6>
+    <h2 class="text-end text-white"
+      ><i class="feather icon-image float-start"></i><span>0</span>
+    </h2>
+  </app-card>
+
+
+</div>
+<div class="col-xl-12 col-md-12">
+  <app-card cardTitle="Study Time" [options]="false">
+    <apx-chart
+      [chart]="chartOptions.chart!"
+      [dataLabels]="chartOptions.dataLabels!"
+      [stroke]="chartOptions.stroke!"
+      [series]="chartOptions.series!"
+      [xaxis]="chartOptions.xaxis!"
+      [colors]="chartOptions.colors!"
+      [fill]="chartOptions.fill!"
+      [markers]="chartOptions.markers!"
+      [yaxis]="chartOptions.yaxis!"
+    ></apx-chart>
+  </app-card>
+</div>
+</div>

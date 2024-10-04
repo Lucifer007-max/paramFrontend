@@ -19,6 +19,7 @@ import 'mousetrap';
 import { NgbDropdownModule, NgbNavModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
+// import { SafePipe } from 'src/pipe/url.pipe';
 
 @NgModule({
   imports: [
@@ -34,7 +35,7 @@ import { FooterComponent } from './common/footer/footer.component';
     NgClickOutsideDirective,
     HeaderComponent,
     FooterComponent,
-
+    // SafePipe,
   ],
   exports: [
     CommonModule,
@@ -50,7 +51,8 @@ import { FooterComponent } from './common/footer/footer.component';
     NgScrollbarModule,
     NgClickOutsideDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    // SafePipe,
   ],
   declarations: [DataFilterPipe, SpinnerComponent, ],
 })

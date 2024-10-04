@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
       return true;
     } else {
       this.Api.ErrorSnackbar('You are not Authorized ! Login Again')
-      this.router.navigate(['/auth/signin']);
+      this.router.navigate(['/login']);
       return false;
     }
   }

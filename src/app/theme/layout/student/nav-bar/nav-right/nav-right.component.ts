@@ -5,6 +5,7 @@ import { GradientConfig } from 'src/app/app-config';
 
 // bootstrap
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-nav-right',
@@ -28,11 +29,14 @@ export class StudentNavRightComponent implements DoCheck {
   chatMessage: boolean;
   friendId!: number;
   gradientConfig = GradientConfig;
-
+  stuData:any
   // constructor
-  constructor() {
+  constructor(private router: Router) {
     this.visibleUserList = false;
     this.chatMessage = false;
+    const _stuData:any = sessionStorage.getItem('student')
+    this.stuData = JSON.parse(_stuData)
+      console.log(this.stuData)
   }
 
   // public method
@@ -47,5 +51,10 @@ export class StudentNavRightComponent implements DoCheck {
     } else {
       this.gradientConfig.isRtlLayout = false;
     }
+  }
+
+  handleLogout() {
+    sessionStorage.clear()
+    this.router.navigate(['/'])
   }
 }

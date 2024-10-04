@@ -1,3 +1,32 @@
 <app-header></app-header>
-<p>shop works!</p>
+
+<section class="page-title banner" style="background-image: url(https://jufailitech.com/envatoitems/LMSOne/html/images/background/pattern-10.png)">
+  <div class="pattern-layer" style="background-image: url(images/background/pattern-9.png)"></div>
+  <div class="auto-container">
+    <!-- <h2 style="color: white">{{this.courseList.title.toUpperCase()}}</h2> -->
+    <ul class="bread-crumb p-0">
+      <li><a href="/">sdfksdlfk</a></li>
+      <!-- <li>{{this.courseList.title.toUpperCase()}}</li> -->
+    </ul>
+  </div>
+</section>
+
+<div class="container my-5">
+  <div class="text-center mb-4">
+      <h2 class="title">Shop With Us</h2>
+      <p>A diverse array of learning materials to enhance your educational journey.</p>
+  </div>
+  <div class="row">
+      <div class="col-md-4" *ngFor="let merchandies of merchandiesList">
+          <div class="product-card">
+           en
+            <div class="d-flex justify-content-between align-items-center t-2">
+              <h4 class="product-name">{{merchandies.title}}</h4>
+              <h5 class="text-dark">₹ {{merchandies.price}} </h5>
+            </div>
+            <a class="btn btn-primary" routerLink="/shop/{{merchandies.id}}"> View</a>
+          </div>
+      </div>
+  </div>
+</div>
 <app-footer></app-footer>

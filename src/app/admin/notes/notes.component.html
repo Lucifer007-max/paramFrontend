@@ -1,0 +1,66 @@
+<app-card cardTitle="Create Notes" [options]="false" >
+
+  <form  [formGroup]="NotesForm" (ngSubmit)="handleSubmit()">
+    <div class="row">
+      <div class="mb-3 col-lg-6">
+        <label for="" class="form-label">Select Course</label>
+        <!-- <input type="text" class="form-control" formControlName="title"> -->
+         <select class="form-select" (change)="handleCourse($event)">
+          <option *ngFor="let list of this.courseList;" value="{{list.id}}">{{list.title}}</option>
+         </select>
+      </div>
+      <div class="mb-3 col-lg-6">
+       <label for="" class="form-label">Notes Image</label>
+        <input type="file" class="form-control" (change)="onFileSelect($event)" formControlName="image" accept="*/accept"multiple >
+      </div>
+      <div class="mb-3 col-lg-6">
+        <label for="" class="form-label">Notes Title</label>
+        <input type="text" class="form-control" formControlName="title">
+      </div>
+      <div class="mb-3 col-lg-6">
+        <label for="" class="form-label">Notes Price</label>
+        <input type="number" class="form-control" formControlName="price">
+      </div>
+      <div class="mb-3 col-lg-6">
+        <label for="" class="form-label">Notes Price</label>
+        <textarea type="number" class="form-control" formControlName="desc"></textarea>
+      </div>
+
+    </div>
+    <button type="submit" (click)="handleSubmit()" class="btn col-2 btn-primary" *ngIf="this.loader == false">Add</button>
+    <div class="spinner-border text-dark" role="status" *ngIf="this.loader == true">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </form>
+
+</app-card>
+
+
+<app-card cardTitle="Notes List" [options]="false">
+  <table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th>
+        <th scope="col">Desc</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of this.NotesList; index as i">
+        <th scope="row">{{i+1}} </th>
+        <td>{{list.price}}</td>
+        <td><img src="http://paramapi.getmocktest.com/{{list.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')}}" width="50px" height="50px"/></td>
+        <td>{{list.desc}}</td>
+        <td><a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <ng-template #elsePart>
+    <div class="alert alert-danger" role="alert">
+      There is no course created yet !
+    </div>
+  </ng-template> -->
+
+</app-card>

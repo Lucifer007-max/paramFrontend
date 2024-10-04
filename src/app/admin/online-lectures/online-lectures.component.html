@@ -1,0 +1,93 @@
+<app-card cardTitle="Create Lectures" [options]="false">
+
+  <form class="row" autocomplete="off" #one [formGroup]="lectureForm" (ngSubmit)="handleSubmit()">
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Course</label>
+      <select class="form-select" (change)="handleCourse($event)" formControlName="courseName">
+        <option *ngFor="let list of courseList" [value]="list.id">{{list.title}}</option>
+      </select>
+    </div>
+
+    <div class="mb-3 col-lg-6" formArrayName="lectureLinks">
+      <small>Only add the Link ID : https://www.youtube.com/watch?v=<i class="text-danger">MNbfiDXZBsg&t=906s</i></small>
+      <div *ngFor="let link of lectureLinks.controls; let i = index" [formGroupName]="i" class="col-12">
+        <div>
+          <label class="form-label">Lecture Link {{i + 1}}</label>
+          <div class="d-flex align-items-center ">
+            <input type="text" class="form-control" formControlName="letureLink" placeholder="EX:MNbfiDXZBsg&t=906s">
+            <button type="button" (click)="removeLectureLink(i)" class="btn btn-danger mt-2" *ngIf="lectureLinks.length > 1">Remove</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" (click)="addLectureLink()" class="btn btn-success">Add Lecture Link</button>
+    </div>
+
+    <div class="mb-3 col-lg-12">
+    </div>
+
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Lectures Details</label>
+      <textarea rows="3" cols="4" class="form-control" formControlName="description"></textarea>
+    </div>
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Lectures Price</label>
+      <input type="text" class="form-control" formControlName="amount" />
+    </div>
+
+    <div class="mb-3 col-lg-12">
+      <div class="spinner-border text-dark" role="status" *ngIf="this.sloader == true">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <button type="submit" class="btn btn-primary">{{this.onedit === true ? "Update" : "Submit"}}</button>
+    </div>
+  </form>
+
+  <!-- <a type="submit" (click)="handleSubmit()" class="btn btn-primary w-25" *ngIf="this.sloader == false"  width="100px">Submit</a> -->
+
+</app-card>
+
+
+
+
+<app-card cardTitle="Lectures List" [options]="false">
+  <table class="table" >
+    <!-- *ngIf="this.courseList.length > 0;else elsePart" -->
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Price</th>
+        <th scope="col">Lectures Link</th>
+        <th scope="col">Lectures Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of this.lecturesList; index as i">
+        <th scope="row">{{i+1}} </th>
+        <td>{{list.price}}</td>
+        <td>
+          <ul>
+            <li *ngFor="let link of list.lectureLink.split(',')">
+              <a [href]="link.trim()" target="_blank">{{ link.trim() }}</a>
+            </li>
+          </ul>
+        </td>
+        <td>{{list.desc}}</td>
+        <!-- <td><img src="http://paramapi.getmocktest.com/{{list.image.replace('wwwroot\\', '').replace('/\\/g', '/')}}" width="50px" height="50px"/></td> -->
+        <td>
+          <!-- <div class="spinner-border text-dark" role="status" *ngIf="this.loader == true">
+            <span class="sr-only">Loading...</span>*ngIf="this.loader == false"
+          </div> -->
+          <a class="btn btn-info mx-2 btn-sm" (click)="handleEdit(list, one)" ><i class="fa fa-edit"></i></a>
+          <a class="btn btn-danger mx-2 btn-sm" (click)="handleDelete(list.id)" ><i class="fa fa-trash"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <ng-template #elsePart>
+    <div class="alert alert-danger" role="alert">
+      There is no course created yet !
+    </div>
+  </ng-template> -->
+
+</app-card>

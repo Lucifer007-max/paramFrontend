@@ -1,0 +1,76 @@
+<app-header></app-header>
+
+<section class="page-title" style="background-image: url(https://jufailitech.com/envatoitems/LMSOne/html/images/background/pattern-10.png)">
+  <div class="pattern-layer" style="background-image: url(images/background/pattern-9.png)"></div>
+  <div class="auto-container">
+    <!-- <h2 style="color: white">{{this.courseList.title.toUpperCase()}}</h2> -->
+    <ul class="bread-crumb p-0">
+      <li><a href="/">Home</a></li>
+      <!-- <li>{{this.courseList.title.toUpperCase()}}</li> -->
+    </ul>
+  </div>
+</section>
+
+
+<div class="container course-container ">
+  <div class="row">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item box-class mb-4" *ngFor="let item of notesList; index as i">
+            <div 
+           class=" col-12 col-md-12 d-md-flex mt-3">
+              <div class="col-12 col-md-4  pt-2 me-0 me-md-4">
+                <!-- <img
+                  src="assets/studymaterial.png"
+                  class="img-fluid d-block m-auto"
+                /> -->
+                <img src="http://paramapi.getmocktest.com/{{item.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')}}"  class="img-fluid d-block m-auto"/>
+              </div>
+              <div class="col-12 col-md-8 ps-0 ps-md-3 mt-2">
+                <div class="d-md-flex justify-content-between mb-2">
+                  <h3 class="class-header" id="courseTitle1">{{item.title}}</h3>
+                </div>
+                <div class="mb-2 class-desc"></div>
+                <div class="d-flex col-12 col-md-8 justify-content-center mb-4"> </div>
+      
+                <div class="justify-content-start spe-price">Special Discounted Price</div>
+      
+                <div class="d-md-flex justify-content-between">
+                  <div class="d-flex justify-content-between col-md-5">
+                    <div class="class-price" id="evnCoursePrice1"> ₹ {{item.price}} </div>
+                    <div class="class-old-price"><del>₹ 2999</del></div>
+                    <div class="class-price-off">33% OFF</div>
+                  </div>
+      
+                  <div class="float-end me-md-4">
+                    <div class="font-fam-med font-16 col-4">
+                      <span class="expCourse" id="evn_explore1"
+                        ><button type="button" class="btn btn-block btn-primary px-4 px-md-5"   [id]="'panelsStayOpen-heading' + i"
+                        data-bs-toggle="collapse" 
+                        [attr.data-bs-target]="'#panelsStayOpen-collapse' + i"
+                        aria-expanded="false" 
+                        [attr.aria-controls]="'panelsStayOpen-collapse' + i">Explore</button></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div 
+          [id]="'panelsStayOpen-collapse' + i" 
+          class="accordion-collapse collapse border" 
+          [attr.aria-labelledby]="'panelsStayOpen-heading' + i">
+          <div class="accordion-body">
+            <h5 class="border-bottom mb-2 pb-2">Notes Description</h5> 
+            {{ item.desc }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<app-footer></app-footer>

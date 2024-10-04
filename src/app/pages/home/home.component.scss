@@ -56,18 +56,18 @@
 
 .section_1 {
   background-color: #fff;
-  padding: 10% 0;
+  padding: 3% 0;
   position: relative;
 }
 
-@media (min-width:768px) {
-  .card_conatiner {
-    position: absolute;
-    bottom: -130px;
-    right: 0;
-    left: 0;
-  }
-}
+// @media (min-width:768px) {
+//   .card_conatiner {
+//     position: absolute;
+//     bottom: -130px;
+//     right: 0;
+//     left: 0;
+//   }
+// }
 
 .pills_data {
   width: 215px;
@@ -200,14 +200,14 @@ img.d-block.w-100.height_banner {
   color: #0e4d85;
   font-weight: 900;
   font-size: 35px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 @media (max-width:600px) {
   .title {
     color: #0e4d85;
     font-weight: 900;
     font-size: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 }
 
@@ -237,4 +237,56 @@ img.d-block.w-100.height_banner {
 }
 .card-custom .card-body {
   padding: 30px 0px;
+}
+
+
+.product-card {
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-wrapper {
+  height: 250px;
+  background-color: #f8f8f8;
+}
+
+.product-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.add-to-cart-btn {
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product-image-wrapper:hover .add-to-cart-btn {
+  opacity: 1;
+}
+
+.product-details {
+  padding: 10px 0;
+}
+
+.product-name {
+  font-weight: 700;
+  color: #333;
+}
+
+.star-rating i {
+  margin-right: 2px;
+}
+
+.product-pricing {
+  font-size: 1.1rem;
 }

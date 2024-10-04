@@ -1,5 +1,6 @@
 // Angular import
 import { Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 // project import
 import * as _ from 'lodash';
@@ -10,10 +11,15 @@ import * as _ from 'lodash';
 export class DataFilterPipe implements PipeTransform {
   // public method
   // eslint-disable-next-line
+  constructor(private domSanitizer: DomSanitizer) {}
   transform(array: any, query: string) {
     if (query) {
       return _.filter(array, (row: { name: string }) => row.name.toLowerCase().indexOf(query.toLowerCase()) > -1);
     }
     return array;
+  }
+
+  transform1(url:any) {
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

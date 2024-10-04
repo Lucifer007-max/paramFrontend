@@ -1,0 +1,468 @@
+.page-title {
+  position: relative;
+  text-align: center;
+  padding: 100px 0px;
+  background-size: cover;
+  background-color: #0e4d85;
+}
+
+.course-container {
+  margin: 50px auto;
+}
+
+.course-page-section-two {
+  position: relative;
+  padding: 100px 0px 100px;
+}
+
+.box-class {
+  background: no-repeat padding-box #fff;
+  box-shadow: 0 3px 20px #0000001a;
+  border-radius: 20px;
+  min-height: 255px;
+  padding: 15px;
+}
+
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 100%;
+  height: auto
+}
+
+.video-box {
+  background: no-repeat padding-box #211818;
+  border-radius: 20px;
+  height: 220px;
+  width: 360px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.spe-price {
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #333;
+}
+
+.class-old-price,
+.class-price {
+  line-height: 49px;
+  letter-spacing: 0;
+}
+.class-price {
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+}
+.class-old-price {
+  font-weight: 300;
+  font-size: 14px;
+  color: #888;
+}
+.class-price-off {
+  background: no-repeat padding-box #46b284;
+  box-shadow: 0 3px 10px #00000014;
+  border-radius: 20px;
+  height: 29px;
+  line-height: 7px;
+  padding: 12px;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.course-block-five .content {
+  position: relative;
+  padding: 25px 20px;
+  background-color:rgb(246,246,246);
+
+}
+.course-block-five .course-btn {
+  position: relative;
+  display: block;
+  font-weight: 600;
+  padding: 16px 28px;
+  text-align: center;
+  font-size: var(--font-15);
+  color: var(--color-sixteen);
+  background-color: var(--color-eighteen);
+}
+.course-block-five .heart {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 33px;
+  height: 33px;
+  z-index: 1;
+  line-height: 33px;
+  text-align: center;
+  border-radius: 50px;
+  display: inline-block;
+  font-family: "flaticon";
+  font-size: 14px;
+  color: pink;
+  background-color: #fff;
+}
+.flaticon-favorite:before {
+  content: "\f127";
+}
+.course-block-five .image img {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.course-block-five .feature-list {
+  position: relative;
+}
+.course-block-five .feature-list li a {
+  position: relative;
+  padding: 5px 14px;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #000;
+}
+
+
+.page-title .bread-crumb li {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: var(--font-16);
+  color: var(--color-thirtythree);
+  margin-right:15px;
+  padding-right: 15px;
+}
+.page-title .bread-crumb li:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+.page-title .bread-crumb li {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  color: rgb(238,173,3);
+  margin-right:15px;
+  padding-right: 15px;
+}
+  .inner-box {
+      position: relative;
+  }
+
+  .course-block-five .content {
+      position: relative;
+      padding: 25px 20px;
+      background-color: rgb(245,245,245);;
+  }
+  .course-block-five .feature-list {
+      position: relative;
+  }
+  .img_div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+// .card-body {
+// height: 140px;
+// }
+.img_ {
+position: absolute;
+right: 10px;
+width: 40% !important;
+bottom: 0px;
+}
+
+
+  .img_div img {
+    width:25%
+  }
+  .course-block-five .price {
+      position: relative;
+      font-weight: 500;
+      padding: 4px 0px;
+      display: inline-block;
+      font-size: 18px;
+      color: #111;
+      margin-left: 20px;
+  }
+
+  .unstyle-list {
+      list-style: none;
+  }
+
+
+  .course-block-five .course-btn {
+      position: relative;
+      display: block;
+      font-weight: 600;
+      padding: 16px 28px;
+      text-align: center;
+      font-size: 15px;
+      color: #111;
+      background-color: rgb(197,226,228);
+      transition: 0.5s all;
+  }
+  .styled-pagination li a:hover, .styled-pagination li a.active {
+      color: #fff;
+      border-color: #111;
+      background-color:rgb(197,226,228);
+  }
+
+  .styled-pagination li a {
+      position: relative;
+      display: inline-block;
+      line-height: 42px;
+      height: 46px;
+      width: 46px;
+      min-width: 46px;
+      font-weight: 500;
+      border-radius: 0px;
+      text-align: center;
+      text-transform: capitalize;
+      transition: all 500ms ease;
+      -webkit-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      font-size: 16px;
+      color: #111;
+      border: 2px solid #111;
+  }
+
+
+  .styled-pagination li {
+      position: relative;
+      margin: 0px 5px 10px;
+      display: inline-block;
+  }
+
+  .course-block-five .course-btn:hover {
+      color: #fff;
+      background-color: #111;
+  }
+
+  .filter-box {
+      position: relative;
+      padding: 15px 30px;
+      margin-bottom: 45px;
+      background-color: rgb(245,245,245);;
+  }
+
+  .filter-box .form-group select {
+      background: none;
+      color:#111;
+      font-size: 16px;
+      border: none;
+  }
+
+  .page-title::before {
+      content: '';
+      background: #0e4d850f;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      top: 0;
+  }
+
+  .brands-list .form-group .check-box {
+      position: relative;
+      transition: all 300ms ease;
+  }
+  .brands-list .form-group .check-box input[type="checkbox"] {
+      display: none;
+  }
+
+
+.brands-list .form-group .check-box input[type="checkbox"]:checked + label {
+  border-color: #25a9e0;
+  transition: all 300ms ease;
+}
+.brands-list .form-group .check-box label {
+  position: relative;
+  line-height: 22px;
+  padding-left: 25px;
+  padding: 2px 0px 0px 35px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0;
+  color: var(--color-fourtythree);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.brands-list .form-group .check-box input[type="checkbox"]:checked + label:before {
+  opacity: 1;
+  border-color: #111;
+  transition: all 300ms ease;
+}
+.brands-list .form-group .check-box label:before {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  height: 20px;
+  width: 20px;
+  content: "";
+  border-radius: 0px;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  border: 1px solid #111;
+}
+.brands-list .form-group .check-box input[type="checkbox"]:checked + label:after {
+  max-width: 20px;
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.brands-list .form-group .check-box label:after {
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  content: '';
+  opacity: 0;
+  overflow: hidden;
+  background: transparent;
+  display: block;
+  border: 1px solid #111;
+  -webkit-transition: max-width 500ms ease;
+  -moz-transition: max-width 500ms ease;
+  -ms-transition: max-width 500ms ease;
+  -o-transition: max-width 500ms ease;
+  transition: max-width 500ms ease;
+}
+
+.sidebar-title h5 {
+  position: relative;
+  font-weight: 700;
+  color: #111;
+  padding-bottom:10px;
+  border-bottom: 1px solid #111;
+}
+.sidebar-title {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+
+
+
+
+.section_1 {
+background-color: #fff;
+padding: 5% 0;
+position: relative;
+}
+
+@media (min-width:768px) {
+.card_conatiner {
+  // position: absolute;
+  // bottom: -x
+}
+}
+
+.pills_data {
+width: 215px;
+flex-wrap: wrap;
+gap: 10px;
+}
+.bg-blue {
+background: #0E4D85;
+}
+
+.img_hero {
+width: 70%;
+margin: 0 auto;
+display: block;
+}
+
+.bg-icon::before{
+content: '';
+background-image: url('../../../assets/images/home/icon.png');
+display: block;
+filter: contrast(0.5);
+width: 50px;
+background-repeat: no-repeat;
+height: 25px;
+position: absolute;
+bottom: 0;
+}
+.bg-icon::after{
+content: '';
+background-image: url('../../../assets/images/home/icons2.png');
+display: block;
+filter: contrast(0.5);
+width: 50px;
+background-repeat: no-repeat;
+height: 40px;
+position: absolute;
+top: 34px;
+right: 21px;
+}
+
+.bg_blue_img::before {
+content: '';
+height: 100%;
+width: 100%;
+clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+display: block;
+position: absolute;
+background: #E3EFFB;
+z-index: -1;
+}
+.bg_blue_img {
+position: relative;
+}
+
+
+
+
+.card-custom {
+display: flex;
+flex-direction: row-reverse;
+margin-bottom: 1rem;
+height: 180px;
+}
+.card-custom img {
+width: 150px;
+object-fit: contain;
+}
+.card-custom .card-body {
+flex: 1;
+}
+.card-custom-1 {
+background-color: #e3f2fd;
+}
+.card-custom-2 {
+background-color: #fce4ec;
+}
+.card-custom-3 {
+background-color: #e8f5e9;
+}
+.card-custom .card-body {
+padding: 30px 0px;
+}

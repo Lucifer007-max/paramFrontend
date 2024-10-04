@@ -20,35 +20,43 @@ export interface NavigationItem {
 
 export const StudentNavigationItems: NavigationItem[] = [
   {
-    id: 'navigation',
-    title: 'Navigation',
-    type: 'group',
-    icon: 'icon-group',
-    children: [
-      {
+   
         id: 'dashboard',
         title: 'Dashboard',
         type: 'item',
         url: '/student/dashboard',
         icon: 'feather icon-home'
       },
-      {
-        id: 'Course',
-        title: 'My Course',
-        type: 'item',
-        url: '/student/course',
-        icon: 'feather icon-book'
-      },
+
       {
         id: 'Profile',
         title: 'My Profile',
         type: 'item',
         url: '/student/profile',
         icon: 'feather icon-user-plus'
-      },
+      
 
-    ]
   },
+  {
+    id: 'course',
+    title: 'Courses',
+    type: 'collapse',
+    icon: 'feather icon-menu',
+    children: [
+      {
+        id: 'course2.1',
+        title: 'Study Material',
+        type: 'item',
+        url: '/admin/add-banner',
+      },
+      {
+        id: 'course2.2',
+        title: 'Online Lectures',
+        type: 'item',
+        url: '/student/lectures',
+      },
+    ]
+  }
 
   // {
   //   id: 'ui-component',

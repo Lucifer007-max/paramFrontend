@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+<!-- banner -->
+<section class="banner">
+  <div class="banner-content">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/">Blogs</a></li>
+    </ol>
+    <p class="banner-heading">Blogs</p>
+  </div>
+</section>
+
+<!-- body -->
+<section class="p-6 blog-body">
+  <div class="d-flex main-container w-100">
+    <section class="blogs-list px-4 bg-ssuccess flex-grow-1">
+      <div class="row" >
+
+        <div class="col-lg-12">
+          <!-- <a routerLink="{{}}"> -->
+            <div class="card w-100">
+              <img class="card-img-top" src="http://paramapi.getmocktest.com/{{this.blogImage?.replace('wwwroot\\', '').replace('/\\/g', '/')}}" alt="blog-1" />
+              <div class="card-body px-4">
+                <div class="d-flex gap-4">
+                  <p class="d-flex align-items-center gap-2 text-secondary">
+                    <!-- <img src="../../../assets/images/blogs/calendar-icon.png" alt="" /><span>{{items.date}}</span> -->
+                  </p>
+                  <p class="d-flex align-items-center gap-2 text-secondary">
+                    <img src="../../../assets/images/blogs/tag-icon.png" alt="" /><span>Education</span>
+                  </p>
+                </div>
+                <p style="font-size: 20px"><strong>{{this.blogTitle}}</strong></p>
+
+                <div class="mt-4">
+                  <div [innerHTML]="this.blogDescription"></div>
+                </div>
+              </div>
+            </div>
+          <!-- </a> -->
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<app-footer></app-footer>

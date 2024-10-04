@@ -1,38 +1,42 @@
 <app-card cardTitle="Create Course" [options]="false">
 
   <form [formGroup]="studentForm">
-    <div class="row">
+    <div class="row" #one>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">First Name</label>
+        <label  class="form-label">First Name</label>
         <input type="text" class="form-control" formControlName="firstName">
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">Last Name</label>
+        <label  class="form-label">Last Name</label>
         <input type="text" class="form-control" formControlName="lastName">
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">Gender</label>
-        <select name="" id="" class="form-select" (change)="handleSelect($event  , 'gender')">
-          <option value="1">Male</option>
-          <option value="1">Female</option>
-          <option value="1">Others</option>
+        <label class="form-label">Gender</label>
+        <select class="form-select"  [(ngModel)]="gender"  [ngModelOptions]="{standalone: true}"(change)="handleSelect($event  , 'gender')">
+          <option value="Select any Gender">Select any Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
         </select>
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">DOB</label>
-        <input type="date" class="form-control" formControlName="dob">
+        <label  class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email">
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">Mobile No</label>
+        <label  class="form-label">DOB</label>
+        <input type="date" class="form-control"  formControlName="dob">
+      </div>
+      <div class="mb-3 col-lg-6">
+        <label  class="form-label">Mobile No</label>
         <input type="number" class="form-control" formControlName="mobileno">
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">Password</label>
+        <label  class="form-label">Password</label>
         <input type="text" class="form-control" formControlName="password">
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">State</label>
-        <select name="" id="" class="input-sm form-select " (change)="handleSelect($event  , 'state')">
+        <label  class="form-label">State</label>
+        <select class="input-sm form-select " [(ngModel)]="state"  [ngModelOptions]="{standalone: true}" (change)="handleSelect($event  , 'state')">
           <option value="-1">Select State</option>
           <option value="1">Andhra Pradesh</option>
           <option value="2">Arunachal Pradesh</option>
@@ -67,30 +71,30 @@
         </select>
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">Amount</label>
+        <label  class="form-label">Amount</label>
         <input type="text" class="form-control" formControlName="amount">
       </div>
       <div class="mb-3 col-lg-6">
-        <label for="" class="form-label">Validity</label>
-        <select name="" id="" class="form-select" (change)="handleSelect($event  , 'validity')">
+        <label  class="form-label">Validity</label>
+        <select class="form-select" [(ngModel)]="validity"  [ngModelOptions]="{standalone: true}" (change)="handleSelect($event  , 'validity')">
           <option value="1">1 Month</option>
-          <option value="1">6 Month</option>
-          <option value="1">12 Month</option>
+          <option value="6">6 Month</option>
+          <option value="12">12 Month</option>
         </select>
       </div>
       <div class="mb-3 col-lg-6">
-        <label  class="form-label"  >Select Course</label>
-        <ng-multiselect-dropdown
-          [placeholder]="'Select Course'"
-          [settings]="dropdownSettings1"
-          [data]="this.dropdownList"
-          (onSelect)="onItemSelect($event)"
-          (onSelectAll)="onSelectAll($event)"
-        >
-      </ng-multiselect-dropdown>
+        <label class="form-label">Select Course</label>
+        <select class="form-select"  [(ngModel)]="courseID"  [ngModelOptions]="{standalone: true}" (change)="handleCourse($event)">
+          <option *ngFor="let list of this.courseList" value="{{list.id}}">{{list.title}}</option>
+        </select>
       </div>
     </div>
-    <button type="submit" class="btn col-2 btn-primary" (click)="addStudent()" *ngIf="this.loader == false">Add</button>
+    <div  *ngIf="!this.onedit" >
+      <button type="submit" class="btn col-2 btn-primary" (click)="addStudent()" *ngIf="this.loader == false">Add</button>
+    </div>
+    <div  *ngIf="this.onedit" >
+      <button type="submit" class="btn col-2 btn-primary" (click)="addStudent()" *ngIf="this.loader == false">Update</button>
+    </div>
     <div class="spinner-border text-dark" role="status" *ngIf="this.loader == true">
       <span class="sr-only">Loading...</span>
     </div>
@@ -100,7 +104,7 @@
 
 
 <app-card cardTitle="Student List" [options]="false">
-  <table class="table" >
+  <table class="table table-bordered table-hover table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -134,14 +138,12 @@
           <div class="spinner-border text-dark" role="status" *ngIf="this.loader == true">
             <span class="sr-only">Loading...</span>
           </div>
-          <a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)" *ngIf="this.loader == false"><i class="fa fa-trash"></i></a></td>
+          <a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)" *ngIf="this.loader == false"><i class="fa fa-trash"></i></a>
+          <a class="btn btn-info mx-2 btn-sm" (click)="handleEdit(list ,one )"><i class="fa fa-edit"></i></a>
+        </td>
       </tr>
     </tbody>
   </table>
-  <!-- <ng-template #elsePart>
-    <div class="alert alert-danger" role="alert">
-      There is no course created yet !
-    </div>
-  </ng-template> -->
+
 
 </app-card>

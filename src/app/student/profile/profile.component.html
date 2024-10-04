@@ -1,0 +1,221 @@
+<div class="container-xxl">
+
+  <div class="row justify-content-center">
+      <div class="col-4">
+          <div class="card sticky-top">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-lg-12 align-self-center mb-3 mb-lg-0">
+                          <div class="d-flex align-items-center flex-row flex-wrap">
+                              <div class="position-relative me-3">
+                                  <img src="https://mannatthemes.com/rizz/default/assets/images/users/avatar-7.jpg" alt="" height="120" class="rounded-circle">
+                                  <a href="#" class="thumb-md justify-content-center d-flex align-items-center bg-primary text-white rounded-circle position-absolute end-0 bottom-0 border border-3 border-card-bg">
+                                      <i class="fas fa-camera"></i>
+                                  </a>
+                              </div>
+                              <div class="">
+                                  <h5 class="fw-semibold fs-22 mb-1">{{this.studentData.firstname.trim()}} {{this.studentData.lastname.trim()}}</h5>
+                                  <p class="mb-0 text-muted fw-medium"><span>Course: </span>{{this.studentData.courseID.trim()}}</p>
+                              </div>
+                          </div>
+                      </div><!--end col-->
+
+                  </div><!--end row-->
+              </div><!--end card-body-->
+          </div><!--end card-->
+      </div> <!--end col-->
+
+
+      <div class="col-md-8">
+        <ul class="nav nav-tabs mb-3" role="tablist">
+            <!-- <li class="nav-item" role="presentation">
+                <a class="nav-link fw-medium" data-bs-toggle="tab" href="#post" role="tab" aria-selected="false" tabindex="-1">Post</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link fw-medium" data-bs-toggle="tab" href="#gallery" role="tab" aria-selected="false" tabindex="-1">Gallery</a>
+            </li>                                                 -->
+            <li class="nav-item" role="presentation">
+                <a class="nav-link fw-medium active" data-bs-toggle="tab" href="#settings" role="tab" aria-selected="true">Settings</a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+            <div class="tab-pane p-3 active show" id="settings" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h4 class="card-title">Personal Information</h4>
+                            </div><!--end col-->
+                        </div>  <!--end row-->
+                    </div><!--end card-header-->
+                    <div class="card-body pt-0">
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">First Name</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <input class="form-control" type="text" [value]="this.studentData.firstname.trim()">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Last Name</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <input class="form-control" type="text" [value]="this.studentData.lastname.trim()">
+                            </div>
+                        </div>
+                        <!-- <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Company Name</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <input class="form-control" type="text" value="MannatThemes">
+                                <span class="form-text text-muted font-12">We'll never share your email with anyone else.</span>
+                            </div>
+                        </div> -->
+
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Contact Phone</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                                    <input type="text" class="form-control" [value]="this.studentData.mobileno.trim()" placeholder="Phone" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Email Address</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                    <input type="text" class="form-control" [value]="this.studentData.email.trim()" placeholder="Email" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Email Address</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                   <div  class="badge nav-pills">{{this.studentData.validity.trim()}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Website Link</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="la la-globe"></i></span>
+                                    <input type="text" class="form-control" value=" https://mannatthemes.com/" placeholder="Email" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">State</label>
+                            <div class="col-lg-9 col-xl-8">
+                              <select name="" id="" [(ngModel)]="state" class="input-sm form-select " (change)="handleSelect($event  , 'state')">
+                                <option value="-1">Select State</option>
+                                <option value="1">Andhra Pradesh</option>
+                                <option value="2">Arunachal Pradesh</option>
+                                <option value="3">Assam</option>
+                                <option value="4">Bihar</option>
+                                <option value="5">Chhattisgarh</option>
+                                <option value="6">Goa</option>
+                                <option value="7">Gujarat</option>
+                                <option value="8">Haryana</option>
+                                <option value="9">Himachal Pradesh</option>
+                                <option value="10">Jammu and Kashmir</option>
+                                <option value="11">Jharkhand</option>
+                                <option value="12">Karnataka</option>
+                                <option value="13">Kerala</option>
+                                <option value="14">Madhya Pradesh</option>
+                                <option value="15">Maharashtra</option>
+                                <option value="16">Manipur</option>
+                                <option value="17">Meghalaya</option>
+                                <option value="18">Mizoram</option>
+                                <option value="19">Nagaland</option>
+                                <option value="20">Orissa</option>
+                                <option value="21">Punjab</option>
+                                <option value="22">Rajasthan</option>
+                                <option value="23">Sikkim</option>
+                                <option value="24">Tamil Nadu</option>
+                                <option value="25">Telangana</option>
+                                <option value="26">Tripura</option>
+                                <option value="27">Uttar Pradesh</option>
+                                <option value="28">Uttarakhand</option>
+                                <option value="29">West Bengal</option>
+
+                              </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-9 col-xl-8 offset-lg-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                    </div><!--end card-body-->
+                </div><!--end card-->
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Change Password</h4>
+                    </div><!--end card-header-->
+                    <div class="card-body pt-0">
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Current Password</label>
+                            <div class="col-lg-9 col-xl-8">
+                              <div class="input-group">
+                                <!-- <input type="text" class="form-control" [value]="this.studentData.email.trim()" placeholder="Email" aria-describedby="basic-addon1"> -->
+                                <input class="form-control" type="{{this.flag ? 'text' : 'password' }}" placeholder="Password"  [value]="this.studentData.password.trim()" >
+                                <span class="input-group-text" (click)="handlepwd()"><i class="fa {{this.flag ? 'fa-eye' : 'fa-eye-slash' }}"></i></span>
+                              </div>
+                                <!-- <a href="#" class="text-primary font-12">Forgot password ?</a> -->
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">New Password</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <input class="form-control" type="password" placeholder="New Password">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center form-label">Confirm Password</label>
+                            <div class="col-lg-9 col-xl-8">
+                                <input class="form-control" type="password" placeholder="Re-Password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-9 col-xl-8 offset-lg-3">
+                                <button type="submit" class="btn btn-primary">Change Password</button>
+                                <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                    </div><!--end card-body-->
+                </div><!--end card-->
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Other Settings</h4>
+                    </div><!--end card-header-->
+                    <div class="card-body pt-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="Email_Notifications" checked="">
+                            <label class="form-check-label" for="Email_Notifications">
+                                Email Notifications
+                            </label>
+                            <span class="form-text text-muted fs-12 mt-0">Do you need them?</span>
+                          </div>
+                          <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="" id="API_Access">
+                            <label class="form-check-label" for="API_Access">
+                                API Access
+                            </label>
+                            <span class="form-text text-muted font-12 mt-0">Enable/Disable access</span>
+                        </div>
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div>
+        </div>
+    </div> <!--end col-->
+  </div><!--end row-->
+
+
+
+
+</div>

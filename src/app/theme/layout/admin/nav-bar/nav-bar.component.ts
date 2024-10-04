@@ -1,5 +1,6 @@
 // Angular Import
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ApiService } from 'src/service/api.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,9 +12,13 @@ export class NavBarComponent {
   menuClass = false;
   collapseStyle = 'none';
   windowWidth = window.innerWidth;
+  logo:any;
   @Output() NavCollapse = new EventEmitter();
   @Output() NavCollapsedMob = new EventEmitter();
 
+  constructor(private service:ApiService){
+    this.logoGet()
+  }
   // public method
   toggleMobOption() {
     this.menuClass = !this.menuClass;
@@ -24,5 +29,11 @@ export class NavBarComponent {
     if (this.windowWidth >= 992) {
       this.NavCollapse.emit();
     }
+  }
+
+  logoGet() {
+    this.service.logoGet().subscribe((res => {
+      this.logo = res
+    }))
   }
 }

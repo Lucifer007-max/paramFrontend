@@ -41,8 +41,12 @@ import { StudentNavCollapseComponent } from './theme/layout/student/navigation/n
 import { StudentNavLeftComponent } from './theme/layout/student/nav-bar/nav-left/nav-left.component';
 import { StudentNavRightComponent } from './theme/layout/student/nav-bar/nav-right/nav-right.component';
 import { StudentService } from 'src/service/student.service';
+import { AuthService } from 'src/service/auth.service';
+// import { SafePipe } from 'src/pipe/url.pipe';
 // import { StudyAbroadComponent } from './pages/study-abroad/study-abroad.component';
-
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { AdminAuthGuard } from 'src/guard/adminguard.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,15 +75,20 @@ import { StudentService } from 'src/service/student.service';
     StudentNavCollapseComponent,
     StudentNavLeftComponent,
     StudentNavRightComponent,
+    // SafePipe,
     // StudyAbroadComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule , HttpClientModule,     NgMultiSelectDropDownModule.forRoot()
+  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule , HttpClientModule,     NgMultiSelectDropDownModule.forRoot(),AngularEditorModule
+
   ],
   providers: [
     AuthInterceptorProvider,
     AuthGuard,
+    AdminAuthGuard,
     ApiService,
     StudentService,
+    AuthService,
+
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

@@ -38,8 +38,9 @@ export default class SignInComponent implements OnInit {
     }
     this.API.adminAuth(JsonBody).subscribe((res: any) => {
       this.API.SuccessSnackbar(res.msg);
-      sessionStorage.setItem('token' , res.token)
-      this.router.navigate(['/dashboard'])
+      localStorage.setItem('admintoken' , res)
+      // this.API.setData('Admintoken' , res.token)
+      this.router.navigate(['/admin/dashboard'])
     },(err) => {
       this.API.ErrorSnackbar(err.message)
     })

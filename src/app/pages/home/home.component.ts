@@ -33,6 +33,12 @@ export default class HomeComponent implements OnInit, AfterViewChecked {
     this.getMerchandies();
   }
 
+  truncateText(text: string, wordLimit: number): string {
+    const words = text.split(' ');
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(' ') + '...' : text;
+  }
+
+
   getBanner(){
     this.service.bannerGet().subscribe((res:any)=> {
       this.bannerList = res;

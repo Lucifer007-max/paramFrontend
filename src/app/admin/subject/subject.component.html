@@ -1,0 +1,61 @@
+<app-card cardTitle="Create Subject" [options]="false">
+
+  <form class="row" autocomplete="off" [formGroup]="subjectForm" (ngSubmit)="handleSubmit()">
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Select Course</label>
+      <select class="form-select">
+        <option>JEE</option>
+        <option>IIT</option>
+        <option>NEET</option>
+        <option>Math</option>
+      </select>
+    </div>
+    <div class="mb-3 col-lg-6">
+      <label class="form-label">Subject Name </label>
+      <input type="text" class="form-control" id="exampleInputEmail1" formControlName="courseName">
+      <!-- <input type="file" class="form-control" (change)="onFileSelect($event)" formControlName="courseImage" accept="image/*"> -->
+    </div>
+  </form>
+  <!-- <div class="spinner-border text-dark" role="status" *ngIf="this.sloader == true">
+    <span class="sr-only">Loading...</span>*ngIf="this.sloader == false"
+  </div> -->
+  <a type="submit" (click)="handleSubmit()" class="btn btn-primary w-25"  width="100px">Submit</a>
+
+</app-card>
+
+
+
+
+<app-card cardTitle="Subject List" [options]="false">
+  <table class="table" >
+    <!-- *ngIf="this.courseList.length > 0;else elsePart" -->
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Course Name</th>
+        <th scope="col">Subject Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let list of this.courseList; index as i">
+        <th scope="row">{{i+1}} </th>
+        <td>{{list.title}}</td>
+        <td>{{list.description}}</td>
+        <td>{{list.tags}}</td>
+        <td><img src="http://paramapi.getmocktest.com/{{list.image.replace('wwwroot\\', '').replace('/\\/g', '/')}}" width="50px" height="50px"/></td>
+        <td>
+          <div class="spinner-border text-dark" role="status" *ngIf="this.loader == true">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)" *ngIf="this.loader == false"><i class="fa fa-trash"></i></a></td>
+      </tr> -->
+    </tbody>
+  </table>
+  <!-- <ng-template #elsePart>
+    <div class="alert alert-danger" role="alert">
+      There is no course created yet !
+    </div>
+  </ng-template> -->
+
+</app-card>

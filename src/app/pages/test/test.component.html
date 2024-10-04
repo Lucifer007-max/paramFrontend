@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<section class="page-title" style="background-image: url(https://jufailitech.com/envatoitems/LMSOne/html/images/background/pattern-10.png)">
+  <div class="pattern-layer" style="background-image: url(images/background/pattern-9.png)"></div>
+  <div class="auto-container">
+    <!-- <h2 style="color: white">{{this.courseList.title.toUpperCase()}}</h2> -->
+    <ul class="bread-crumb p-0">
+      <li><a href="/">Home</a></li>
+      <!-- <li>{{this.courseList.title.toUpperCase()}}</li> -->
+    </ul>
+  </div>
+</section>
+
+
+<div class="container course-container ">
+  <div class="row">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item box-class mb-4" *ngFor="let item of notesList; index as i">
+        <ol>
+          <li *ngFor="let desc of item.description.split(',')">
+            <a target="_blank" [innerHTML]="desc.trim()"></a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<app-footer></app-footer>

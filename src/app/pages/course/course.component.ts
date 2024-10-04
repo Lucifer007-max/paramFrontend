@@ -19,16 +19,16 @@ export default class CourseComponent {
   URLresponse:any;
   URLId:any;
   constructor(private route: ActivatedRoute , private service : ApiService){
-    this.getCourse();
     this.getTestimonial();
   }
-
-
+  
+  
   ngOnInit(): void {
     this.URLresponse = this.route.params.subscribe((params:any) => {
       // this.loading = this.loader.hide();
       this.URLId = params['id'];
       console.log(this.URLId)
+      this.getCourse();
       // this.getCourse(this.URLId)
       // this.Title = +params['Title']
       // this.getById(this.id);
@@ -37,15 +37,16 @@ export default class CourseComponent {
   }
 
   getCourse(){
-    this.service.courseGet().subscribe((res:any)=> {
+    this.service.courseGetById(this.URLId).subscribe((res:any)=> {
       this.courseList = res;
+      console.log(res)
     })
   }
 
   getTestimonial() {
     this.service.testimonialGet().subscribe((res: any) => {
       this.testimonialList = res;
-      console.log(this.testimonialList, res);
+      // console.log(this.testimonialList, res);
     });
   }
 

@@ -1,10 +1,14 @@
-<app-card cardTitle="Add About" [options]="false">
+<app-card cardTitle="Add Study Abroad" [options]="false">
   <form [formGroup]="aboutForm">
     <div class="row">
       <div class="mb-3 col-lg-6">
         <label for="" class="form-label">Description</label>
         <!-- <input type="text" class="form-control" formControlName="bannerTitle"> -->
-        <textarea name="" class="form-control" id="" formControlName="title"></textarea>
+        <!-- <textarea name="" class="form-control" id="" formControlName="title"></textarea> -->
+        <!-- <div [froalaEditor] [froalaEditorConfig]="editorConfig" [(froalaModel)]="editorContent"></div> -->
+        <!-- app.component.html -->
+        <!-- <textarea [froalaEditor]="editorConfig"></textarea> -->
+        <angular-editor formControlName="title" [config]="editorConfig"></angular-editor>
       </div>
       <div class="mb-3 col-lg-6">
         <label for="" class="form-label">Image</label>
@@ -20,7 +24,7 @@
     </div>
   </form>
 </app-card>
-<app-card cardTitle="Banner List" [options]="false">
+<app-card cardTitle="Study Abroad List" [options]="false">
   <table class="table">
     <thead>
       <tr>
@@ -35,7 +39,7 @@
         <th scope="row">{{i+1}} </th>
         <td>{{list.title}}</td>
         <td><img
-            src="https://paramapi.getmocktest.com/{{list.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')}}"
+            src="http://paramapi.getmocktest.com/{{list.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')}}"
             width="100px" height="100px" /></td>
         <td><a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)"><i class="fa fa-trash"></i></a></td>
       </tr>

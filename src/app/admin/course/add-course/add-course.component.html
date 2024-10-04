@@ -1,13 +1,16 @@
 <app-card cardTitle="Create Course" [options]="false">
 
   <form class="row" autocomplete="off" [formGroup]="courseForm" (ngSubmit)="handleSubmit()">
-    <div class="mb-3 col-lg-6">
+    <div class="mb-3 col-lg-6" #one>
       <label class="form-label">Course Name</label>
       <input type="text" class="form-control" id="exampleInputEmail1" formControlName="courseName">
     </div>
     <div class="mb-3 col-lg-6">
       <label class="form-label">Course Image <small class="text-danger">300*300px / 100kb Size</small></label>
       <input type="file" class="form-control" (change)="onFileSelect($event)" formControlName="courseImage" accept="image/*">
+      <div>
+        <img [src]="imageUrl" alt="Course Image" *ngIf="imageUrl" />
+      </div>
     </div>
     <div class="mb-3 col-lg-6">
       <label class="form-label">Course Tag</label>
@@ -24,13 +27,16 @@
     </div>
     <div class="mb-3 col-lg-6">
       <label class="form-label">Course Details</label>
-       <textarea rows="3" cols="4" class="form-control" formControlName="description"></textarea>
+       <!-- <textarea rows="3" cols="4" class="form-control" formControlName="description"></textarea> -->
+       <angular-editor formControlName="description" [config]="editorConfig"></angular-editor>
+
     </div>
   </form>
   <div class="spinner-border text-dark" role="status" *ngIf="this.sloader == true">
     <span class="sr-only">Loading...</span>
   </div>
-  <a type="submit" (click)="handleSubmit()" class="btn btn-primary w-25" *ngIf="this.sloader == false" width="100px">Submit</a>
+  <a type="submit" (click)="handleSubmit()" class="btn btn-primary w-25" *ngIf="this.sloader == false" width="100px">{{onedit?
+                    'Update':'Submit'}}</a>
 
 </app-card>
 
@@ -56,12 +62,14 @@
         <td>{{list.title}}</td>
         <td>{{list.description}}</td>
         <td>{{list.tags}}</td>
-        <td><img src="https://paramapi.getmocktest.com/{{list.image.replace('wwwroot\\', '').replace('/\\/g', '/')}}" width="50px" height="50px"/></td>
+        <td><img src="http://paramapi.getmocktest.com/{{list.image.replace('wwwroot\\', '').replace('/\\/g', '/')}}" width="50px" height="50px"/></td>
         <td>
           <div class="spinner-border text-dark" role="status" *ngIf="this.loader == true">
             <span class="sr-only">Loading...</span>
           </div>
-          <a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)" *ngIf="this.loader == false"><i class="fa fa-trash"></i></a></td>
+          <a class="btn btn-danger btn-sm" (click)="handleDelete(list.id)" *ngIf="this.loader == false"><i class="fa fa-trash"></i></a>
+          <a class="btn btn-info btn-sm" (click)="handleEdit(list ,one)"><i class="fa fa-edit"></i></a>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -1,0 +1,49 @@
+
+<app-card cardTitle="Lectures List" [options]="false">
+  <table class="table table-bordered">
+    <!-- *ngIf="this.courseList.length > 0;else elsePart" -->
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <!-- <th scope="col">Price</th> -->
+        <!-- <th scope="col">Lectures Link</th> -->
+        <th scope="col">Lectures Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of this.lecturesList; index as i">
+        <!-- <td>₹ {{list.price}}</td> -->
+        <td>{{list.desc}}</td>
+        <td>
+          <span>
+            <span *ngFor="let link of list.lectureLink.split(',')">
+              <a class="btn btn-sm btn-outline-success" target="_blank"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="handleClick(link.trim())"><i class="fa fa-play"></i></a>&nbsp;
+            </span>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-card>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <div class="modal-body">
+          <!-- <iframe *ngIf="link" [src]="transform1(link.trim())" id="link" width="100%" height="100%"></iframe> -->
+          <iframe *ngIf="safeUrl" [src]="safeUrl" id="link" width="100%" height="100%"></iframe>
+
+        </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>

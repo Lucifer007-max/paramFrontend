@@ -1,0 +1,125 @@
+.banner {
+  background-image: url('./../../../assets/images/contact-us/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 80px 40px;
+}
+
+.banner-content {
+  margin-left: 100px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banner-heading {
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.breadcrumb {
+  font-weight: 500;
+  background: 0 0;
+  padding: 0;
+  font-size: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+.breadcrumb-item {
+  display: inline;
+  width: auto;
+}
+
+.breadcrumb-item a {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}
+.align-items-center {
+  align-items: center !important;
+}
+
+
+.page-title .bread-crumb li {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: var(--font-16);
+  color: var(--color-thirtythree);
+  margin-right:15px;
+  padding-right: 15px;
+}
+.page-title .bread-crumb li:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+.page-title .bread-crumb li {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  color: rgb(238,173,3);
+  margin-right:15px;
+  padding-right: 15px;
+}
+  .inner-box {
+      position: relative;
+  }
+
+  .course-block-five .content {
+      position: relative;
+      padding: 25px 20px;
+      background-color: rgb(245,245,245);;
+  }
+  .course-block-five .feature-list {
+      position: relative;
+  }
+  .img_div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+.product-card {
+  border: none;
+  text-align: start;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+  width: 100%;
+  height: auto;
+}
+.product-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.product-price {
+  text-decoration: line-through;
+  color: grey;
+}
+.product-discount {
+  color: red;
+  margin-left: 5px;
+}
+.star-rating i {
+  color: gold;
+}
+.star-rating .fa-star-half-alt {
+  color: gold;
+}
+.star-rating .fa-star {
+  color: lightgray;
+}
+

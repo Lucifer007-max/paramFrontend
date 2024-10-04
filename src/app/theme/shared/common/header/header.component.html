@@ -25,18 +25,33 @@
         </div>
       </div>
       <div class="col-lg-6 col-12">
-        <div class="float-end">
+        <div class="float-end" *ngIf="!this.token">
           <a class="mx-1 text_light" routerLink="/login"><i class="fab fa-signup"></i>Login</a>
-          <a class="mx-1 text_light"><i class="fa fa-login"></i>Register</a>
+          <!-- <a class="mx-1 text_light"><i class="fa fa-login"></i>Register</a> -->
+        </div>
+        <div class="dropdown float-end" *ngIf="this.token">
+          <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dashboard
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" (click)="handleLogout()">Logout</a></li>
+          </ul>
         </div>
       </div>
+
+
     </div>
   </div>
 </nav>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="" routerLink="/"><img src="../../../../../assets/logo.png" width="150" /></a>
-    <button
+    <a class="" routerLink="/">
+      <img *ngIf="this.logo" [src]="this.logo[0]?.logoPath === null ? '../../../../../assets/logo.png':  'http://paramapi.getmocktest.com/Logos/'+this.logo[0]?.logoPath.trim()" alt="logo-img" width="150" height="65" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
@@ -74,11 +89,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link"  routerLink="/" routerLinkActive="active">Home</a>
+          <a class="nav-link"  routerLink="/">Home</a>
         </li>
         <li class="nav-item ">
           <a class="nav-link" routerLink="/about" routerLinkActive="active">
@@ -97,12 +112,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
         </li>
-        <li class="nav-item position-relative">
+        <!-- <li class="nav-item position-relative">
           <a class="nav-link"><i class="fa fa-shopping-cart"></i><span class="cart_count bg-danger">0</span></a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link"><i class="fa fa-search"></i></a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

@@ -18,6 +18,7 @@ export default class CourseDetailsComponent implements OnInit {
   courseTitle:any;
   courseTag:any;
   courseImage:any;
+
   constructor( private route: ActivatedRoute, public service :ApiService) { }
 
   ngOnInit(): void {
@@ -34,7 +35,7 @@ export default class CourseDetailsComponent implements OnInit {
 
   getCourse(id:any) {
     this.service.courseGetById(id).subscribe((res) => {
-      console.log(res)
+      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>.",res)
       this.courseTitle = res.title
       this.courseTag = res.tags
       this.courseImage = res.image
