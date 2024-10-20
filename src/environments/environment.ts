@@ -7,10 +7,10 @@ import packageInfo from '../../package.json';
 export const environment = {
   appVersion: packageInfo.version,
   production: false,
-  apiUrl: 'http://paramapi.getmocktest.com/api/',
-  backendUrl : 'http://paramapi.getmocktest.com/api/',
-  // apiUrl: 'https://localhost:44320/api/',
-  // backendUrl : 'https://localhost:44320/api/',
+  apiUrl: 'https://paramapi.getmocktest.com/api/',
+  backendUrl : 'https://paramapi.getmocktest.com/api/',
+  // apiUrl: 'http://localhost:4200/api/',
+  // backendUrl : 'http://localhost:4200/api/',
 };
 
 /*

@@ -1,95 +1,134 @@
 <app-header></app-header>
 
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+
+
+<!-- <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="background-color: black;">
   <div class="carousel-inner">
-    <div class="carousel-item" *ngFor="let banner of bannerList; let i = index" [class.active]="i === 0" [attr.data-bs-interval]="2000">
-      <img [src]="'http://paramapi.getmocktest.com/'+banner.imagePath.replace('wwwroot\\', '').replace('/\\/g', '/')"  class="d-block w-100 height_banner" alt="...">
-      <div class="carousel-caption d-none">
-        <h5>Slide {{i + 1}} label</h5>
-        <p class="text-dark">Some representative placeholder content for slide {{i + 1}}.</p>
-      </div>
+    <div class="carousel-item" *ngFor="let item of items; let i = index" [class.active]="i === 0" style="color: white; background-color: black;">
+      <div class="d-block w-100 text-center">{{ item }}</div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let item of items; let i = index" 
+         [ngClass]="{'active': i === activeIndex, 'fade-in': i === activeIndex, 'fade-out': i !== activeIndex && !firstLoad}">
+      <img [src]="item.image" class="d-block w-100 image" alt="Image">
+      <div class="carousel-caption text">{{ item.text }}</div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" (click)="prevSlide()">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" (click)="nextSlide()">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
   </button>
 </div>
 
 
-
-
-
-
-<div class="section_1">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
+<div class="section_1" >
+  <div class="container box" id="engineer_doctor">
+    <div class="row align-items-center justify-content-center text-center" >
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-lg-0">
         <div>
-          <h2>Are you aspiring to become an <span class="main_txt">ENGINEER or DOCTOR</span> ?</h2>
-          <!-- <p>Lorem ipsum dolor sit amet consectetur. Fringilla neque sed eu consequat sed. Adipiscing duis amet nec
-            lorem odio euismod.</p> -->
-          <a class="btn btn-danger" routerLink="/login">Start Learing</a>
+          <h1 class="source-sans-3-main"><i>Shaping</i> Tomorrow's <b>Doctors</b> and <b>Engineers</b>, Today!</h1>
+          <a class="btn btn-primary" routerLink="/login">Start Learning</a>
         </div>
       </div>
-      <div class="col-lg-6">
-        <img src="assets/home2.png" class="img_hero"/>
+      <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+        <img src="assets/home.png" height="300"/>
       </div>
     </div>
   </div>
+  <div class="container box" id="aboutus">
+    <div class="row align-items-center justify-content-center text-center">
+      <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+        <img src="assets/about_us.png" height="400"/>
+      </div>
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-lg-0">
+        <div>
+          About us
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container box"  id="servicees">
+  <h1 class="text-center source-sans-3-main" style="padding: 20px; font-weight: bold;">Services we offer</h1>
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <img src="../../../assets/images/home/hero.png" class="w-100" />
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12" >
+        <mat-card appearance="outlined">
+          <img mat-card-image src="assets/study_material.png" width="300" alt="Study Material Image">
+          <mat-card-content><b>Study material</b> which can be accessed by students anytime, anywhere. All you need is an internet connection.</mat-card-content>
+          <mat-card-actions>
+            <button  mat-flat-button>Learn more</button>
+          </mat-card-actions>
+        </mat-card>        
       </div>
-      <div class="col-lg-6">
-        <h2><span class="main_txt">About US</span></h2>
-        <p>Welcome to our institute, a premier educational establishment dedicated to empowering students through rigorous academic training and comprehensive preparation for competitive examinations such as IIT-JEE (Indian Institutes of Technology Joint Entrance Examination) and NEET (National Eligibility cum Entrance Test). We cater to students from various educational backgrounds, including those in Std. 8, Std. 9, and Std. 10, ensuring that they receive the foundational knowledge and skills necessary for success in these challenging assessments.</p>
-        <a class="btn btn-danger" routerLink="/about">Know More</a>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <mat-card appearance="outlined">
+          <img mat-card-image src="assets/online_lectures.png" width="300" alt="Study Material Image">
+          <mat-card-content><b>Online lectures</b> with doubt clarifications. Missed a class? No issue. Recorded sessions available for the missed classes.</mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Learn more</button>
+          </mat-card-actions>
+        </mat-card>        
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <mat-card appearance="outlined">
+          <img mat-card-image src="assets/test_series.png" width="300" alt="Study Material Image">
+          <mat-card-content><b>Interactive test series</b> to brush up your knowledge and help you reach the goal of becoming what you want to be.</mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Learn more</button>
+          </mat-card-actions>
+        </mat-card>        
       </div>
     </div>
   </div>
-  <div class="container mt-5 card_conatiner">
-    <div class="row justify-content-center align-items-center ">
+</div>
 
-        <!-- Card 1 -->
-        <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-1">
-          <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 1"> -->
-          <img src="assets/studymaterial.png" class="img_ card-img-right" />
-          <div class="card-body">
-              <h5 class="card-title">Study Material</h5>
-              <!-- <p class="card-text " style="visibility:hidden;">Equip yourself with quality study material.</p> -->
-              <a  class="btn btn-link px-0 text-danger">Know More &#43;</a>
-            </div>
-          </div>
 
-          <!-- Card 2 -->
-          <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-2">
-            <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 2"> -->
-            <img src="assets/Elearn.png" class="img_ card-img-right"/>
-
-            <div class="card-body">
-              <h5 class="card-title">Online Lectures</h5>
-              <!-- <p class="card-text" style="visibility:hidden;">Empower your learning journey with the flexibility.</p> -->
-              <a  class="btn btn-link px-0 text-danger">Know More &#43;</a>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="card card-custom col-md-4 col-sm-6 mb-4 card-custom-3">
-            <!-- <img src="https://via.placeholder.com/150" class="card-img-right" alt="Image 3"> -->
-            <img src="assets/testseries.png" class="img_ card-img-right"/>
-
-            <div class="card-body">
-              <h5 class="card-title">Online Test Series</h5>
-              <!-- <p class="card-text" style="visibility:hidden;">Prepare, click, succeed – the essence of online testing</p> -->
-              <a  class="btn btn-link px-0 text-danger">Know More &#43;</a>
-          </div>
-      </div>
+<div class="container box" id="study_resources">
+  <h1 class="text-center source-sans-3-main" style="padding: 20px; margin-top: 20px; font-weight: bold;">Study Resources</h1>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <mat-card appearance="outlined">
+        <img mat-card-image src="assets/notes.png" width="300" alt="Study Material Image">
+        <mat-card-content>Notes</mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Start Learning</button>
+        </mat-card-actions>
+      </mat-card>        
+    </div>
+    
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <mat-card appearance="outlined">
+        <img mat-card-image src="assets/reference_books.png" width="300" alt="Study Material Image">
+        <mat-card-content>Reference Books</mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Start Learning</button>
+        </mat-card-actions>
+      </mat-card>        
+    </div>
+    
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <mat-card appearance="outlined">
+        <img mat-card-image src="assets/ncert_books.jpg" width="300" alt="Study Material Image">
+        <mat-card-content>NCERT Solutions</mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Start Learning</button>
+        </mat-card-actions>
+      </mat-card>        
     </div>
   </div>
 </div>

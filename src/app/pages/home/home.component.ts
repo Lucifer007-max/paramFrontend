@@ -1,18 +1,75 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/theme/shared/shared.module';
 import { ApiService } from 'src/service/api.service';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 declare const $: any;
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SharedModule, RouterModule],
+  imports: [CommonModule, SharedModule, RouterModule, MatCardModule, MatButtonModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class HomeComponent implements OnInit, AfterViewChecked {
+
+export default class HomeComponent implements OnInit, AfterViewChecked, AfterViewInit {
+
+  
+  observer!: IntersectionObserver;
+
+
+  activeIndex = 0;
+  firstLoad = true;
+  items = [
+    { image: 'https://via.placeholder.com/800x200?text=First+Image', text: 'Text 1' },
+    { image: 'https://via.placeholder.com/800x200?text=Second+Image', text: 'Text 2' },
+    { image: 'https://via.placeholder.com/800x200?text=Third+Image', text: 'Text 3' },
+    { image: 'https://via.placeholder.com/800x200?text=Fourth+Image', text: 'Text 4' },
+    { image: 'https://via.placeholder.com/800x200?text=Fifth+Image', text: 'Text 5' }
+  ];
+
+  nextSlide() {
+    this.firstLoad = false;
+    this.activeIndex = (this.activeIndex + 1) % this.items.length;
+  }
+
+  prevSlide() {
+    this.firstLoad = false;
+    this.activeIndex = (this.activeIndex - 1 + this.items.length) % this.items.length;
+  }
+
+
+
+
+
+  ngAfterViewInit() {
+    this.setupObserver();
+  }
+
+  setupObserver() {
+    const ids = ['engineer_doctor', 'aboutus', 'servicees', 'study_resources', 'div4', 'div5'];  // IDs of the divs
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');  // Add animation class when in view
+        }
+      });
+    }, { threshold: 0.1 });
+
+    ids.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) {
+        this.observer.observe(element);  // Observe each div by its ID
+      }
+    });
+  }
+  
+  
   bannerList:any;
   testimonialList:any = [];
   courseList:any = [];

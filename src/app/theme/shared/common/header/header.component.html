@@ -1,4 +1,4 @@
-<nav class="navbar bg-blue">
+<!-- <nav class="navbar bg-blue">
   <div class="container-fluid w-100 justify-content-around padding_0">
     <div class="row w-100">
       <div class="col-lg-6 col-12 padding_0">
@@ -27,7 +27,7 @@
       <div class="col-lg-6 col-12">
         <div class="float-end" *ngIf="!this.token">
           <a class="mx-1 text_light" routerLink="/login"><i class="fab fa-signup"></i>Login</a>
-          <!-- <a class="mx-1 text_light"><i class="fa fa-login"></i>Register</a> -->
+          <a class="mx-1 text_light"><i class="fa fa-login"></i>Register</a>
         </div>
         <div class="dropdown float-end" *ngIf="this.token">
           <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,7 +42,75 @@
 
     </div>
   </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="" routerLink="/home">
+      <img src="assets/logo.png" width="150" height="65"/> 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+  <div class="collapse navbar-collapse justify-content-end">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">
+          <div style="padding: 8px;">
+            Home
+          </div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">
+          <div style="padding: 8px;">
+            About us
+          </div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/study-abroad">
+          <div style="padding: 8px;">
+            Study Abroad
+          </div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/shop">
+          <div style="padding: 8px;">
+            Shop
+          </div>
+        </a>
+      </li>
+
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/blogs">
+          <div style="padding: 8px;">
+            Blog
+          </div>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus">
+          <div style="padding: 8px;">
+            Contact us
+          </div>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  </div>
 </nav>
+<!-- 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="" routerLink="/">
@@ -51,45 +119,6 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="ms-4 relative all-courses">
-      <button class="border border-primary py-2 px-4 rounded flex flex-column items-center gap-5 justify-content-between">
-        <div class="text-primary font-semibold text-base">All Courses</div>
-      </button>
-      <div class="dropdown-content transition-opacity duration-200 opacity-100 z-30 h-auto rounded-md bg-[#f8f8f8]">
-        <div class="dropdown-item">
-          <a href="#">Class 11</a>
-          <div class="dropdown-subcontent">
-            <a routerLink="/maincourse/neet" >NEET</a>
-            <a routerLink="/maincourse/iit">IIT</a>
-          </div>
-        </div>
-        <div class="dropdown-item">
-          <a href="#">Class 12</a>
-          <div class="dropdown-subcontent">
-            <a routerLink="/maincourse/neet">NEET</a>
-             <a routerLink="/maincourse/iit">IIT</a>
-          </div>
-        </div>
-        <div class="dropdown-item">
-          <a href="#">Drop Out</a>
-          <div class="dropdown-subcontent">
-            <a routerLink="/maincourse/neet">NEET</a>
-             <a routerLink="/maincourse/iit">IIT</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
@@ -112,13 +141,7 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
         </li>
-        <!-- <li class="nav-item position-relative">
-          <a class="nav-link"><i class="fa fa-shopping-cart"></i><span class="cart_count bg-danger">0</span></a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link"><i class="fa fa-search"></i></a>
-        </li> -->
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->

@@ -131,7 +131,7 @@ color: #fff;
   font-weight: 500;
   font-size: 16px;
   // font-size: 16px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 .nav-link:hover{
   color:#0e4d85;
@@ -140,5 +140,5 @@ color: #fff;
 .nav-item .active {
   color:#0e4d85;
   font-weight: 700;
+  transition: 0.5s all;
 }
-  // transition: 0.5s all;
